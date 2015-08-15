@@ -4,7 +4,7 @@
 
 This is the [online version of my thesis](http://lzubiaur.github.io/ldap-book/) I wrote back in 2005 during my Computer Science degree.
 
-Originaly written in French using Latex, I ported the project to Markdown and translated it in English in an effort to publish it online hoping it will be useful.
+Originaly written in French using Latex, I ported the project to Markdown and translated it in English in an effort to publish it online, hoping it will be useful to anyone interested in Unix/ldap security.
 
 ## Copyright
 
