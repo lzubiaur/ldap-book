@@ -1,4 +1,4 @@
-# Study and Implementation of Secured LDAP 
+# Study and Implementation of Secure LDAP 
 
 > English version is still a work in progress.
 
