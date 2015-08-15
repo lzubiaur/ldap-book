@@ -1,0 +1,166 @@
+dn: dc=inpres,dc=be
+associatedDomain: inpres.be
+dc: inpres
+objectClass: top
+objectClass: domain
+objectClass: domainRelatedObject
+objectClass: nisDomainObject
+nisDomain: inpres.be
+
+dn: ou=People, dc=inpres,dc=be
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group, dc=inpres,dc=be
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Rpc, dc=inpres,dc=be
+ou: Rpc
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Protocols, dc=inpres,dc=be
+ou: Protocols
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Networks, dc=inpres,dc=be
+ou: Networks
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Netgroup, dc=inpres,dc=be
+ou: Netgroup
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Aliases, dc=inpres,dc=be
+ou: Aliases
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Hosts, dc=inpres,dc=be
+ou: Hosts
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Services, dc=inpres,dc=be
+ou: Services
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Ethers, dc=inpres,dc=be
+ou: Ethers
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Profile, dc=inpres,dc=be
+ou: Profile
+objectClass: top
+objectClass: organizationalUnit
+
+dn: uid=laurent,ou=People, dc=inpres,dc=be
+userPassword:: e2NyeXB0fTF3QjFENWFFdmlhTTI=
+loginShell: /bin/sh
+uidNumber: 10000
+gidNumber: 10005
+shadowFlag: 0
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: account
+objectClass: top
+uid: laurent
+shadowLastChange: 12839
+cn: laurent
+homeDirectory: /ldap/usr/laurent
+
+dn: uid=test,ou=People, dc=inpres,dc=be
+userPassword:: e2NyeXB0fUxHVkRCUEtoTTJXVVU=
+loginShell: /bin/sh
+uidNumber: 10001
+gidNumber: 10005
+shadowFlag: 0
+objectClass: posixAccount
+objectClass: shadowAccount
+objectClass: account
+objectClass: top
+uid: test
+shadowLastChange: 12839
+cn: test
+homeDirectory: /home/test
+
+dn: cn=ldap,ou=group, dc=inpres,dc=be
+gidNumber: 10005
+description: ldap users
+objectClass: top
+objectClass: posixGroup
+cn: ldap
+
+dn: cn=sunray1V440profil,ou=profile, dc=inpres,dc=be
+credentialLevel: anonymous
+serviceSearchDescriptor: passwd:ou=People,dc=inpres,dc=be
+serviceSearchDescriptor: shadow:ou=People,dc=inpres,dc=be
+serviceAuthenticationMethod: pam_ldap:simple
+objectClass: top
+objectClass: DUAConfigProfile
+defaultServerList: 10.59.4.6
+cn: sunray1V440profil
+defaultSearchBase: dc=inpres,dc=be
+
+dn: cn=sunray1v440,ou=profile, dc=inpres,dc=be
+SolarisTransportSecurity: NS_LDAP_SEC_NONE
+SolarisSearchTimeLimit: 30
+SolarisSearchReferral: NS_LDAP_FOLLOWREF
+SolarisAuthMethod: NS_LDAP_AUTH_SIMPLE
+SolarisSearchScope: NS_LDAP_SCOPE_ONELEVEL
+objectClass: top
+objectClass: SolarisNamingProfile
+SolarisSearchBaseDN: dc=inpres,dc=be
+SolarisLDAPServers: 10.59.4.8
+cn: myprofile
+SolarisCacheTTL: 43200
+SolarisBindDN: cn=proxyagent,ou=profile,dc=inpres,dc=be
+SolarisBindPassword: {NS1}ecc423aad0
+
+dn: nismapname=auto_home, dc=inpres,dc=be
+nisMapName: auto_home
+objectClass: top
+objectClass: nisMap
+
+dn: nismapname=auto_direct, dc=inpres,dc=be
+nisMapName: auto_direct
+objectClass: top
+objectClass: nisMap
+
+dn: nismapname=auto_master, dc=inpres,dc=be
+nisMapName: auto_master
+objectClass: top
+objectClass: nisMap
+
+dn: nismapname=auto_ON, dc=inpres,dc=be
+nisMapName: auto_ON
+objectClass: top
+objectClass: nisMap
+
+dn: nismapname=auto_shared, dc=inpres,dc=be
+nisMapName: auto_shared
+objectClass: top
+objectClass: nisMap
+
+dn: cn=sunray1v440,ou=Hosts, dc=inpres,dc=be
+ipHostNumber: 10.59.4.6
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: sunray1v440
+
+dn: cn=sunray2v440,ou=Hosts, dc=inpres,dc=be
+ipHostNumber: 10.59.4.5
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: sunray2v440
+

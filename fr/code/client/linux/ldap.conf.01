@@ -1,0 +1,10 @@
+# LDAP Defaults
+#
+
+BASE	dc=inpres, dc=be
+HOST	10.59.4.8
+#URI	ldap://ldap.example.com ldap://ldap-master.example.com:666
+
+#SIZELIMIT	12
+#TIMELIMIT	15
+#DEREF		never

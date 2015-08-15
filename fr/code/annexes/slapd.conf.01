@@ -1,0 +1,49 @@
+#
+# See slapd.conf(5) for details on configuration options.
+# This file should NOT be world readable.
+#
+# lastupdate:          Thu Mar 10 11:18:03 CET 2005
+#
+include         /usr/internet/openldap/etc/schema/core.schema
+include		/usr/internet/openldap/etc/schema/cosine.schema
+include         /usr/internet/openldap/etc/schema/nis.schema
+include         /usr/internet/openldap/etc/schema/corba.schema
+include         /usr/internet/openldap/etc/schema/inetorgperson.schema
+include         /usr/internet/openldap/etc/schema/java.schema
+include         /usr/internet/openldap/etc/schema/krb5-kdc.schema
+include         /usr/internet/openldap/etc/schema/misc.schema
+include         /usr/internet/openldap/etc/schema/openldap.schema
+include         /usr/internet/openldap/etc/schema/apx.schema
+
+
+pidfile		/data/openldap/var/openldap_slapd.pid
+argsfile	/data/openldap/var/openldap_slapd.args
+
+# Do not enable referrals until AFTER you have a working directory
+# service AND an understanding of referrals.
+#referral       ldap://root.openldap.org
+
+#######################################################################
+# ldbm database definitions
+#######################################################################
+
+database	ldbm
+suffix          dc=inpres,dc=be
+rootdn          cn=root,dc=inpres,dc=be
+# cleartext passwords, especially for the rootdn, should
+# be avoid.  See slapd.conf(5) for details.
+rootpw          {SSHA}54ZUYZi68u/V5hbdesMO6kAUIohl3YrH
+# database directory
+# this directory MUST exist prior to running slapd AND
+# should only be accessable by the slapd/tools  Mode 700 recommended.
+directory	/data/openldap/var/db 
+
+# Indices to maintain
+index default pres,eq
+index objectClass,uid
+
+access to attr=userpassword
+          by self write
+          by anonymous auth
+          by users read
+          by * compare

@@ -1,0 +1,6 @@
+# ldapdelete -D cn=root,dc=inpres,dc=be -x -W ou=accounts,dc=inpres,dc=be
+Enter LDAP Password:
+# ldapdelete -D cn=root,dc=inpres,dc=be -x -W ou=groups,dc=inpres,dc=be
+Enter LDAP Password:
+# ldapdelete -D cn=root,dc=inpres,dc=be -x -W dc=inpres,dc=be
+Enter LDAP Password:

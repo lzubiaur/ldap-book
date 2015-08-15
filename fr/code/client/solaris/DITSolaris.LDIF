@@ -1,0 +1,19 @@
+dn: ou=People, dc=inpres,dc=be
+ou: People
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Group, dc=inpres,dc=be
+ou: Group
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Hosts, dc=inpres,dc=be
+ou: Hosts
+objectClass: top
+objectClass: organizationalUnit
+
+dn: ou=Profile, dc=inpres,dc=be
+ou: Profile
+objectClass: top
+objectClass: organizationalUnit

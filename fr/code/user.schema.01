@@ -1,0 +1,24 @@
+# Definitions des types d'attribut (1)
+
+attributetype ( 1.3.6.1.1.999.1.1 NAME 'homeDirSunray1v440'
+	DESC 'home directory de la machine sunray1v440'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.1.999.1.2 NAME 'homeDirMontaigne'
+	DESC 'home directory de la machine montaigne'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+attributetype ( 1.3.6.1.1.999.1.3 NAME 'homeDirDiderot'
+	DESC 'home directory de la machine diderot'
+	EQUALITY caseExactIA5Match
+	SYNTAX 1.3.6.1.4.1.1466.115.121.1.26 SINGLE-VALUE )
+
+# Definitions des objets (2)
+
+objectclass ( 1.3.6.1.1.999.2.1 NAME 'userInpres' SUP posixAccount AUXILIARY
+	DESC 'Abstraction of an account with POSIX attributes'
+	MUST ( cn $ uid $ uidNumber $ gidNumber $ homeDirectory )
+	MAY ( userPassword $ loginShell $ gecos $ description $
+	 	homeDirSunray1v440 $ homeDirMontaigne $ homeDirDiderot) )

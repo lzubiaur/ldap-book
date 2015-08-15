@@ -1,0 +1,14 @@
+# ldapsearch -b "" -s base -h 10.59.4.8 "(objectClass=*)"
+
+objectClass=top
+objectClass=OpenLDAProotDSE
+# ldapsearch -b "" -s base -h 10.59.4.8 "(objectClass=*)" +
+
+namingContexts=dc=inpres,dc=be
+supportedControl=2.16.840.1.113730.3.4.2
+supportedExtension=1.3.6.1.4.1.4203.1.11.1
+supportedExtension=1.3.6.1.4.1.1466.20037
+supportedFeatures=1.3.6.1.4.1.4203.1.5.1
+supportedLDAPVersion=2
+supportedLDAPVersion=3
+subschemaSubentry=cn=Subschema

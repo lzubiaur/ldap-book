@@ -1,0 +1,16 @@
+dn: dc=inpres,dc=be
+dc: inpres
+objectClass: dcObject
+objectClass: organization
+o: dc=inpres,dc=be
+
+dn: ou=accounts, dc=inpres,dc=be
+ou: accounts
+description: Accounts
+objectClass: organizationalunit
+
+dn: ou=groups, dc=inpres,dc=be
+ou: groups
+description: groups
+objectClass: organizationalunit
+

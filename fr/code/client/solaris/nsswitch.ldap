@@ -1,0 +1,17 @@
+# cp /etc/nsswitch.ldap /etc/nsswitch.conf
+
+# cat /etc/nsswitch.conf
+
+#
+# /etc/nsswitch.ldap:
+#
+
+...
+
+passwd:     files ldap
+group:      files ldap
+
+# consult /etc "files" only if ldap is down.
+hosts:      ldap [NOTFOUND=return] files
+
+...

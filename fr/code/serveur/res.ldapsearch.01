@@ -1,0 +1,26 @@
+# ldapsearch -x -b dc=inpres,dc=be -h localhost -D cn=root,dc=inpres,dc=be 
+  -W  "objectClass=*" dn
+  
+Enter LDAP Password:
+version: 2
+
+#
+# filter: (objectclass=*)
+# requesting: dn
+#
+
+# inpres, be
+dn: dc=inpres,dc=be
+
+# accounts, inpres, be
+dn: ou=accounts,dc=inpres,dc=be
+
+# groups, inpres, be
+dn: ou=groups,dc=inpres,dc=be
+
+# search result
+search: 2
+result: 0 Success
+
+# numResponses: 4
+# numEntries: 3

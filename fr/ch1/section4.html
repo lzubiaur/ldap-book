@@ -1,0 +1,1192 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Les modèles | Étude et Implémentation de LDAP Sécurisé</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ch1/section5.html" />
+    
+    
+    <link rel="prev" href="../ch1/section3.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="1.4" data-basepath=".." data-revision="Sat Aug 15 2015 14:44:01 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Tapez pour rechercher" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ch1/index.html">
+            
+                
+                    <a href="../ch1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Généralités sur le standard LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch1/section1.html">
+            
+                
+                    <a href="../ch1/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Le service d&#39;annuaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1/section2.html">
+            
+                
+                    <a href="../ch1/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Le standard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch1/section3.html">
+            
+                
+                    <a href="../ch1/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Le protocole
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4" data-path="ch1/section4.html">
+            
+                
+                    <a href="../ch1/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Les modèles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch1/section5.html">
+            
+                
+                    <a href="../ch1/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Le format d&#39;échange
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Contexte
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch2/section2.html">
+            
+                
+                    <a href="../ch2/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        OpenLDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ch2/section3.html">
+            
+                
+                    <a href="../ch2/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Configuration du serveur
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch2/section4.html">
+            
+                
+                    <a href="../ch2/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch2/section5.html">
+            
+                
+                    <a href="../ch2/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch2/section6.html">
+            
+                
+                    <a href="../ch2/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/section7.html">
+            
+                
+                    <a href="../ch2/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch3/index.html">
+            
+                
+                    <a href="../ch3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Authentification LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch3/section1.html">
+            
+                
+                    <a href="../ch3/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Auth. et centralisation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch3/section2.html">
+            
+                
+                    <a href="../ch3/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch3/section3.html">
+            
+                
+                    <a href="../ch3/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch3/section4.html">
+            
+                
+                    <a href="../ch3/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch3/section5.html">
+            
+                
+                    <a href="../ch3/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Plusieurs home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch3/section6.html">
+            
+                
+                    <a href="../ch3/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Récapitulatif
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch4/index.html">
+            
+                
+                    <a href="../ch4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LDAP sécurisé
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ch4/section1.html">
+            
+                
+                    <a href="../ch4/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Authentification SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ch4/section2.html">
+            
+                
+                    <a href="../ch4/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Certificats
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch4/section3.html">
+            
+                
+                    <a href="../ch4/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        OpenLDAP et SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ch4/section4.html">
+            
+                
+                    <a href="../ch4/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch4/section5.html">
+            
+                
+                    <a href="../ch4/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch4/section6.html">
+            
+                
+                    <a href="../ch4/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Tru64 v5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch4/section7.html">
+            
+                
+                    <a href="../ch4/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Tru64 v5.0
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ch4/section8.html">
+            
+                
+                    <a href="../ch4/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Messages LDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="ch4/section9.html">
+            
+                
+                    <a href="../ch4/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        ACL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="ch4/section10.html">
+            
+                
+                    <a href="../ch4/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        Mots de passe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch5/index.html">
+            
+                
+                    <a href="../ch5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Le protocole Kerberos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch5/section1.html">
+            
+                
+                    <a href="../ch5/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Présentation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ch5/section2.html">
+            
+                
+                    <a href="../ch5/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Fonctionnement
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch5/section3.html">
+            
+                
+                    <a href="../ch5/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="conclusion.html">
+            
+                
+                    <a href="../conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="code.html">
+            
+                
+                    <a href="../code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Fichiers de configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="glossaire.html">
+            
+                
+                    <a href="../glossaire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Glossaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="bibliographie.html">
+            
+                
+                    <a href="../bibliographie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Bibliographie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="abstract.html">
+            
+                
+                    <a href="../abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Abstract
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Publié avec GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table des matières"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Recherche"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Paramètres de Police"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Clair</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Nuit</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Partage"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Partager sur Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Partager sur Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Partager sur Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Partager sur Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Partager sur Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Étude et Implémentation de LDAP Sécurisé</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h1 id="1-4-les-mod%C3%A8les-ldap">1.4 Les mod&#xE8;les LDAP</h1>
+<p>Comme explique&#x301; pre&#x301;ce&#x301;demment, le standard LDAP couvre plusieurs aspects. Il de&#x301;finit un protocole d&#x2019;e&#x301;change mais e&#x301;galement quatre mode&#x300;les. Ces mode&#x300;les de&#x301;finissent les services offerts par l&#x2019;annuaire et la fac&#x327;on dont les donne&#x301;es sont organise&#x301;es.</p>
+<h2 id="1-4-1-le-mode%CC%80le-de-donne%CC%81e">1.4.1 Le mode&#x300;le de donne&#x301;e</h2>
+<p>Le mode&#x300;le de donne&#x301;e, ou mode&#x300;le d&#x2019;information du standard LDAP, de&#x301;finit la structure de l&#x2019;annuaire. Le DIT (<em>Directory Information Tree</em>) est l&#x2019;ossature de l&#x2019;annuaire. Il peut e&#x302;tre vu comme un arbre et repre&#x301;sente bien l&#x2019;organisation hie&#x301;rarchique des donne&#x301;es dans l&#x2019;annuaire. Chaque feuille ou noeud de l&#x2019;arbre, est une entre&#x301;e dans l&#x2019;annuaire. Une entre&#x301;e est l&#x2019;unite&#x301; de base de l&#x2019;annuaire. Vis-a&#x300;-vis de ses entre&#x301;es, LDAP a une approche oriente&#x301; objet. En fait, chaque entre&#x301;e est un objet qui instancie une ou plusieurs classes d&#x2019;objets (<em>objectClass</em>). Les classes d&#x2019;objets peuvent de&#x301;river d&#x2019;autres classes. Un <em>objeClass</em> contient des attributs obligatoires ou non. Un attribut a un type et une syntaxe bien de&#x301;finis. Enfin, tous les attributs et classes posse&#x300;dent un nume&#x301;ro unique appele&#x301; OID (<em>Object Identifier</em>). Toutes ces notions sont explique&#x301;es en de&#x301;tail dans la suite de ce chapitre.</p>
+<h3 id="le-dit">Le DIT</h3>
+<p>Dans un annuaire, les donne&#x301;es sont organise&#x301;es de manie&#x300;re hie&#x301;rarchique. Cette vue des donne&#x301;es peut e&#x302;tre repre&#x301;sente&#x301;e comme un arbre avec un noeud principal (racine) et des noeuds feuilles correspondant aux entre&#x301;es dans l&#x2019;annuaire. Cet arbre est e&#x301;galement appele&#x301; DIT (<em>Directory Information Tree</em>). Le sche&#x301;ma 1.6 donne un exemple de DIT simple.</p>
+<p><img src="../images/image_1.6.png" alt="Fig. 1.6 - Arborescence simple d&apos;un annuaire"></p>
+<blockquote>
+<p>Fig. 1.6 &#x2013; Arborescence simple d&#x2019;un annuaire</p>
+</blockquote>
+<p>Le noeud le plus haut du DIT de&#x301;finit le <em>contexte de nommage</em> ou <em>espace de nommage</em> de l&#x2019;annuaire. Ainsi, quand une reque&#x302;te arrive au serveur, celui-ci peut savoir directement si l&#x2019;annuaire prend en charge le contexte demande&#x301;. Concre&#x300;tement, si un client LDAP recherche le nom d&#x2019;un employe&#x301; de l&#x2019;entreprise nomme&#x301;e &quot;X&quot; et que l&#x2019;annuaire ne concerne que les employe&#x301; de l&#x2019;entreprise &quot;Y&quot;, la reque&#x302;te peut e&#x302;tre abandonne&#x301;e sans avoir a parcourir tout l&#x2019;arbre.</p>
+<h3 id="le-sch%C3%A9ma">Le sch&#xE9;ma</h3>
+<p>Les de&#x301;finitions des attributs et des classes d&#x2019;objet supporte&#x301;es par l&#x2019;annuaire sont stocke&#x301;es dans un <em>sche&#x301;ma</em>. En respectant son sche&#x301;ma, l&#x2019;annuaire peut garantir l&#x2019;inte&#x301;grite&#x301; de ses donne&#x301;es. En effet, aucune modification ou ajout ne sera autorise&#x301; si l&#x2019;ope&#x301;ration ne respecte pas les re&#x300;gles e&#x301;tablies par le sche&#x301;ma. Par exemple, une entre&#x301;e dont un attribut obligatoire est manquant ne sera pas ajoute&#x301; dans l&#x2019;annuaire. En outre, le sche&#x301;ma de l&#x2019;annuaire est extensible. Ainsi, il est tout a&#x300; fait possible d&#x2019;ajouter de nouvelles de&#x301;finitions d&#x2019;attribut ou de classe d&#x2019;objet.</p>
+<h3 id="les-oid">Les OID</h3>
+<p>A chaque type d&#x2019;attribut ou classe d&#x2019;objet est associe&#x301; un identifiant unique appele&#x301; OID (<em>Object Identifier</em>). Un OID est une suite de nume&#x301;ros se&#x301;pare&#x301;s par des points (par exemple 6.5.789.4.89.676). Comme pour les adresses IP sur Internet ou les nume&#x301;ros de port, il a e&#x301;te&#x301; ne&#x301;cessaire de de&#x301;signer un organisme charge&#x301; d&#x2019;attribuer les OID au niveau mondial : l&#x2019;IANA (<em>Internet Assigned Numbers Authority</em>). L&#x2019;avantage des OID est leur organisation hie&#x301;rarchique. En effet, l&#x2019;entreprise a&#x300; qui un OID a e&#x301;te&#x301; assigne&#x301;, peut cre&#x301;er inde&#x301;finiment de nouvelles branches sous son nume&#x301;ro racine. Par exemple, l&#x2019;OID 1.2.840.113556, attribue&#x301; a&#x300; Microsoft, a e&#x301;te&#x301; e&#x301;tendu pour donner l&#x2019;OID 1.2.840.113556.1 pour les attributs et les classes du logiciel <em>Active Directory Server</em><sup><a href="#fn_2" id="reffn_2">2</a></sup>.</p>
+<h3 id="les-attributs">Les attributs</h3>
+<p>Chaque entre&#x301;e dans l&#x2019;annuaire est compose&#x301;e d&#x2019;attribut. Ce sont eux qui vont re&#x301;ellement contenir les donne&#x301;es de l&#x2019;annuaire.Un attribut est caracte&#x301;rise&#x301; par plusieurs informations dont un nom, un OID et une syntaxe. Tout comme une variable dans un langage de programmation, un attribut doit posse&#x301;der un type de donne&#x301;e. C&#x2019;est la syntaxe associe&#x301;e a&#x300; l&#x2019;attribut qui va de&#x301;crire le type de donne&#x301;e que l&#x2019;attribut peut contenir. L&#x2019;exemple suivant montre la de&#x301;finition de l&#x2019;attribut <em>telephoneNumber</em>.</p>
+<pre><code>attributetype ( 2.5.4.20 NAME &#x2019;telephoneNumber&#x2019;
+        DESC &#x2019;RFC2256: Telephone Number&#x2019;
+        EQUALITY telephoneNumberMatch
+        SUBSTR telephoneNumberSubstringsMatch
+        SYNTAX 1.3.6.1.4.1.1466.115.121.1.50{32} )
+</code></pre><p>Les principales caracte&#x301;ristiques d&#x2019;un attribut sont repris au tableau 1.2.</p>
+<table>
+<thead>
+<tr>
+<th>Caracte&#x301;ristique</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OID</td>
+<td>Identifiant de l&#x2019;attribut.</td>
+</tr>
+<tr>
+<td>NAME</td>
+<td>Nom de l&#x2019;attribut.</td>
+</tr>
+<tr>
+<td>EQUALITY</td>
+<td>OID de la re&#x300;gle a&#x300; appliquer lors d&#x2019;une comparaison.</td>
+</tr>
+<tr>
+<td>SYBSTRING</td>
+<td>OID de la re&#x300;gle a&#x300; appliquer lors d&#x2019;une recherche d&#x2019;une chai&#x302;ne de caracte&#x300;re dans l&#x2019;attribut.</td>
+</tr>
+<tr>
+<td>SYNTAX</td>
+<td>OID de la syntaxe de&#x301;finissant le type de donne&#x301;e stocke&#x301;e dans l&#x2019;attribut.</td>
+</tr>
+<tr>
+<td>SINGLE-VALUE</td>
+<td>Indique si l&#x2019;attribut peut avoir ou non plusieurs valeurs dans un me&#x302;me objet.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 1.2 &#x2013; Caracte&#x301;ristiques d&#x2019;un attribut</p>
+</blockquote>
+<p>La syntaxe de l&#x2019;attribut de&#x301;finit la re&#x300;gle de codage utilise&#x301;e pour stocker la valeur d&#x2019;un attribut. Le tableau 1.3 de&#x301;crit les principales syntaxes d&#x2019;un attribut. Quant au tableau 1.4, il pre&#x301;sente quelques attributs de&#x301;finis par LDAP. Cette liste est loin d&#x2019;e&#x302;tre exhaustive mais ces attributs sont toujours imple&#x301;mente&#x301;s par un serveur d&#x2019;annuaire LDAP.</p>
+<table>
+<thead>
+<tr>
+<th>Syntaxes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>binary</td>
+<td>Suite quelconque d&#x2019;octets.</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Vrai ou faux.</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>Nombre entier.</td>
+</tr>
+<tr>
+<td>Directory String</td>
+<td>Chai&#x302;ne de caracte&#x300;res.</td>
+</tr>
+<tr>
+<td>db</td>
+<td>Attribut contenant le <em>Distinguished Name</em> d&#x2019;une entre&#x301;e (voir <em>Mode&#x300;le de nommage</em>).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 1.3 &#x2013; Syntaxes d&#x2019;un attribut</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Syntaxes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>namingContexts</td>
+<td>Liste des contextes supporte&#x301;s par l&#x2019;annuaire. Le contexte d&#x2019;un annuaire est l&#x2019;entre&#x301;e racine de l&#x2019;arbre.</td>
+</tr>
+<tr>
+<td>cn</td>
+<td>Le CN (<em>Common Name</em>) repre&#x301;sente le nom de l&#x2019;objet.</td>
+</tr>
+<tr>
+<td>dc</td>
+<td>Composante d&#x2019;un nom de domaine. Par exemple, le FQDN (<em>Fully Qualified Domain Name</em>) &quot;inpres.be&quot;, se de&#x301;compose en deux DC (&quot;inpres&quot; et &quot;be&quot;).</td>
+</tr>
+<tr>
+<td>o</td>
+<td>Contient le nom d&#x2019;une organisation.</td>
+</tr>
+<tr>
+<td>objectClass</td>
+<td>Nom de la classe de l&#x2019;objet.</td>
+</tr>
+<tr>
+<td>ou</td>
+<td>Unite&#x301; organisationnelle a&#x300; laquelle appartient l&#x2019;entre&#x301;e.</td>
+</tr>
+<tr>
+<td>uid</td>
+<td>Identifiant utilise&#x301; lors du <em>login</em>.</td>
+</tr>
+<tr>
+<td>userPassword</td>
+<td>Mot de passe associe&#x301; a&#x300; l&#x2019;attribut <em>uid</em>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 1.4 &#x2013; Quelques attributs LDAP</p>
+</blockquote>
+<h3 id="les-classes-d%E2%80%99objets">Les classes d&#x2019;objets</h3>
+<p>Toute entre&#x301;e dans un annuaire LDAP est un objet instance d&#x2019;une classe. Chaque classe est caracte&#x301;rise&#x301;e par plusieurs informations dont un OID, un nom et un type. Le tableau 1.5 de&#x301;crit les caracte&#x301;ristiques essentielles d&#x2019;une classe d&#x2019;objet.</p>
+<table>
+<thead>
+<tr>
+<th>Syntaxes</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>OID | Identifiant de la classe (doit e&#x302;tre unique).
+NAME | Nom de la classe.
+SUP | Classe dont celle-ci de&#x301;rive.
+TYPE | Type de la classe (abstraite, structurelle ou auxiliaire) 
+MUST Liste des attributs obligatoires.
+MAY | Liste des attributs facultatifs.</p>
+<blockquote>
+<p>Tab. 1.5 &#x2013; Caracte&#x301;ristiques d&#x2019;une classe d&#x2019;objet</p>
+</blockquote>
+<p>Comme pre&#x301;cise&#x301; au tableau 1.5, une classe doit avoir un type parmi les suivants :</p>
+<ul>
+<li>Abstract : Classe ne pouvant pas e&#x302;tre instancie&#x301;e. Seules les classes qui en de&#x301;rive peuvent e&#x302;tre instancie&#x301;es.</li>
+<li>Structural : Ce sont les instances de ces classes qui se retrouvent dans l&#x2019;annuaire. </li>
+<li>Auxiliary : Classe qui sert a&#x300; comple&#x301;ter une classe structurelle.</li>
+</ul>
+<p>Comme en POO (<em>Programmation Oriente&#x301; Objet</em>), l&#x2019;he&#x301;ritage des classes est d&#x2019;application. D&#x2019;ailleurs, toutes les classes LDAP de&#x301;rivent de la classe abstraite top. Cette classe ne de&#x301;finit qu&#x2019;un seul attribut obligatoire : <em>objectClass</em>. Ce dernier est utilise&#x301; pour contenir le nom de la classe instancie&#x301;e par l&#x2019;objet. Le code suivant donne un exemple de de&#x301;finition de classe d&#x2019;objet LDAP.</p>
+<pre><code>objectclass ( 2.5.6.6 NAME &#x2019;person&#x2019;
+        DESC &#x2019;RFC2256: a person&#x2019;
+        SUP top STRUCTURAL
+        MUST ( sn $ cn )
+        MAY ( userPassword $ telephoneNumber $ seeAlso $ description ) )
+</code></pre><p>La classe d&#x2019;objet &quot;<em>person</em>&quot; de&#x301;finie plus haut, contient deux attributs obligatoires (MUST) et quatre attributs facultatifs (MAY). La classe <em>person</em> de&#x301;rive directement de la classe top. Ainsi, l&#x2019;entre&#x301;e concernant l&#x2019;employe&#x301; &quot;dupont&quot; de la socie&#x301;te&#x301; &quot;Sun&quot;, donnera au format LDIF (voir <a href="">Le format d&#x2019;e&#x301;change LDIF</a>) :</p>
+<pre><code>dn: cn=jean, dc=Sun
+telephoneNumber: 04240667834
+userPassword:: e1NIQX1uSmFkMzBWQ
+objectClass: top
+objectClass: person
+sn: dupont
+cn: jean
+</code></pre><p>Le tableau suivant (1.6) reprend quelques classes d&#x2019;objet LDAP souvent utilise&#x301;es.
+Syntaxes | Description
+--- | --- 
+top |  Classe la plus haute dans la hie&#x301;rarchie des classes. C&#x2019;est a&#x300; partir de cette classe que de&#x301;rivent toutes les autres.
+person | Description ge&#x301;ne&#x301;rique d&#x2019;une personne (nom, pre&#x301;nom, nume&#x301;ro de te&#x301;le&#x301;phone...)
+inetperson | Personne faisant partie d&#x2019;une entreprise et ayant acce&#x300;s a&#x300; des services Internet.
+organization | Repre&#x301;sente une entreprise.
+organizationalUnit | Repre&#x301;sente un service ou un de&#x301;partement d&#x2019;une entreprise
+posixAccount | Classe utilise&#x301;e pour repre&#x301;senter un compte utilisateur d&#x2019;un syste&#x300;me d&#x2019;exploitation conforme aux normes POSIX (<em>Portable Operating System Interface</em>) comme Linux, Solaris...</p>
+<blockquote>
+<p>Tab. 1.6 &#x2013; Classes LDAP</p>
+</blockquote>
+<h3 id="l%E2%80%99entre%CC%81e-rootdse">L&#x2019;entre&#x301;e rootDSE</h3>
+<p>L&#x2019;objet <em>rootDSE</em> est un objet LDAP particulier n&#x2019;appartenant a&#x300; aucune classe. Il est destine&#x301; a&#x300; de&#x301;tenir des informations ge&#x301;ne&#x301;rales sur l&#x2019;annuaire dont :</p>
+<ul>
+<li>les noms des contexts ge&#x301;re&#x301;s par le serveur LDAP (<em>namingContexts</em>)</li>
+<li>la liste des me&#x301;canismes d&#x2019;authentification supporte&#x301;s (<em>supportedSASLMechanisms</em>) </li>
+<li>les versions de LDAP prises en charge par le serveur (<em>supportedLDAPVersion</em>)</li>
+</ul>
+<p>Il est possible de lire cet objet en recherchant dans l&#x2019;annuaire un objet ne posse&#x301;dant pas de nom. En effet, l&#x2019;objet <em>rootDSE</em> est le seul objet d&#x2019;un annuaire dont le DN (nom distinctif de l&#x2019;objet) peut e&#x302;tre vide.</p>
+<h2 id="1-4-2-le-mode%CC%80le-de-nommage">1.4.2 Le mode&#x300;le de nommage</h2>
+<p>Le mode&#x300;le de nommage, ou mode&#x300;le de de&#x301;signation, de&#x301;finit comment les entre&#x301;es de l&#x2019;annuaire peuvent e&#x302;tre re&#x301;fe&#x301;rence&#x301;es et nomme&#x301;es de manie&#x300;re unique et ce quelle que soit la classe de l&#x2019;objet. La possibilite&#x301; de nommer tout objet de la me&#x302;me fac&#x327;on, quelle que soit sa nature, permet de qualifier un annuaire d&#x2019;<em>espace de noms homoge&#x300;nes</em>. Cette caracte&#x301;ristique offre une plus grande ouverture et interope&#x301;rabilite&#x301; des annuaires LDAP.</p>
+<p>Le standard LDAP fournit deux concepts pour nommer un objet : un nom absolu appele&#x301; DN (<em>Distinguished Name</em>) et un nom relatif appele&#x301; RDN (<em>Relative Distinguished Name</em>)</p>
+<h3 id="nom-distinctif-relatif">Nom distinctif relatif</h3>
+<p>Le RDN (<em>Relative Distinguished Name</em>) ou nom relatif permet d&#x2019;identifier de fac&#x327;on unique les entre&#x301;es d&#x2019;une me&#x302;me branche et d&#x2019;un me&#x302;me niveau dans l&#x2019;annuaire. Dans la figure 1.7, les deux zones de l&#x2019;arborescence encadre&#x301;es d&#x2019;un trait pointille&#x301; de&#x301;finissent des pe&#x301;rime&#x300;tres pour lesquels un RDN doit e&#x302;tre unique.</p>
+<p><img src="../images/image_1.7.png" alt="Fig. 1.7 &#x2013; Pe&#x301;rime&#x300;tre d&#x2019;unicite&#x301; du RDN"></p>
+<blockquote>
+<p>Fig. 1.7 &#x2013; Pe&#x301;rime&#x300;tre d&#x2019;unicite&#x301; du RDN</p>
+</blockquote>
+<p>Un RDN est compose&#x301; d&#x2019;un attribut et d&#x2019;une valeur. Ainsi, le RDN d&#x2019;une entre&#x301;e concernant une personne peut-e&#x302;tre par exemple <strong>cn=laurent</strong> ou encore <strong>uid=laurent</strong>. Dans l&#x2019;exemple donne&#x301; au tableau 1.7, il n&#x2019;est plus possible de de&#x301;finir une entre&#x301;e concernant un service administratif pour le site &quot;A&quot;. En effet, le nom distinctif relatif &quot;ou= Service Administratif&quot; existe de&#x301;ja&#x300; pour cette branche (site A) et ce niveau. Par contre, il est possible de cre&#x301;er plusieurs RDN &quot;ou=Personnes&quot;. Une entre&#x301;e sous la branche &quot;ou=Service Administratif&quot; et l&#x2019;autre sous la branche &quot;ou=Comptabilite&#x301;&quot;.</p>
+<h3 id="nom-distinctif">Nom distinctif</h3>
+<p>A l&#x2019;inverse d&#x2019;un RDN (<em>Relative Distinguished Name</em>), le nom distinctif ou DN (<em>Distinguished Name</em>) permet de re&#x301;fe&#x301;rencer de fac&#x327;on unique n&#x2019;importe qu&#x2019;elle entre&#x301;e de l&#x2019;annuaire. Le DN d&#x2019;une entre&#x301;e est constitue&#x301; de tous les RDN (<em>Relative Distinguished Name</em>) de ses entre&#x301;es parentes. La figure 1.8 donne un exemple de DN.</p>
+<p><img src="../images/image_1.8.png" alt="Fig. 1.8 &#x2013; Exemple de nom distinctif (DN)"></p>
+<blockquote>
+<p>Fig. 1.8 &#x2013; Exemple de nom distinctif (DN)</p>
+</blockquote>
+<p>Un DN se construit en reprenant tous les RDN des entre&#x301;es supe&#x301;rieures. Ainsi, le DN pour l&#x2019;entre&#x301;e concernant la personne Dupont (cn=Dupont) se notera de la fac&#x327;on suivante :</p>
+<pre><code>cn=Dupont, ou=Personnes, ou=Service Administratif, ou=Site A, o=Entreprise
+</code></pre><h2 id="1-4-3-le-mode%CC%80le-fonctionnel">1.4.3 Le mode&#x300;le fonctionnel</h2>
+<p>Le mode&#x300;le fonctionnel, ou mode&#x300;le des services, de&#x301;finit les ope&#x301;rations que doit offrir un serveur d&#x2019;annuaire LDAP. De&#x300;s lors, il est possible d&#x2019;e&#x301;tablir la liste suivante :</p>
+<ul>
+<li><p><strong>Connexion (<em>Bind</em>) :</strong></p>
+<p> Ope&#x301;ration de connexion du client LDAP a&#x300; l&#x2019;annuaire LDAP. Le client doit fournir un identifiant (souvent l&#x2019;attribut <em>uid</em>) et un mot de passe (attribut <em>userPassword</em>).</p>
+</li>
+<li><p><strong>De&#x301;connexion (<em>Unbind</em>) :</strong></p>
+<p> Libe&#x300;re la connexion et met fin a&#x300; la session.</p>
+</li>
+<li><p><strong>Notification (<em>Unsolicited Notification</em>) :</strong></p>
+<p> Permet au serveur d&#x2019;envoyer au client une information non sollicite&#x301;e par le client comme, par exemple, le signalement d&#x2019;une fin de session inattendue.</p>
+</li>
+<li><p><strong>Recherche (<em>Search</em>) :</strong></p>
+<p> Permet d&#x2019;effectuer des recherches dans l&#x2019;annuaire.</p>
+</li>
+<li><p><strong>Modification (<em>Modify</em>) :</strong> </p>
+<p> Permet d&#x2019;ajouter, de modifier ou de supprimer des attributs d&#x2019;une entre&#x301;e.</p>
+</li>
+<li><p><strong>Ajout (<em>Add</em>) :</strong></p>
+<p> Permet l&#x2019;ajout d&#x2019;un nouvel objet.</p>
+</li>
+<li><p><strong>Suppression (<em>Delete</em>) :</strong></p>
+<p> Permet la suppression d&#x2019;un objet.</p>
+</li>
+<li><p><strong>Modification de DN (<em>Modify</em> DN) :</strong></p>
+<p> Permet de renommer un objet en modifiant son DN.</p>
+</li>
+<li><p><strong>Comparaison (<em>Compare</em>) :</strong></p>
+<p> Permet d&#x2019;effectuer des comparaisons et de ve&#x301;rifier si l&#x2019;annuaire contient une ou plusieurs valeurs donne&#x301;es.</p>
+</li>
+<li><p><strong>Abandon (<em>Abandon</em>) :</strong></p>
+<p> Permet d&#x2019;abandonner une ope&#x301;ration en cours.</p>
+</li>
+<li><p><strong>Extension (Extended) :</strong></p>
+<p> Permet de de&#x301;finir des ope&#x301;rations e&#x301;tendues. C&#x2019;est a&#x300; dire des ope&#x301;rations non standards. En effet, le protocole LDAPv3 permet d&#x2019;e&#x301;tendre les fonctionnalite&#x301;s du serveur en de&#x301;finissant de nouvelles ope&#x301;rations.</p>
+</li>
+</ul>
+<p>Les recherches dans un annuaire, peuvent se comple&#x301;ter de filtres de recherche. Un filtre est simplement une chai&#x302;ne de caracte&#x300;res compose&#x301;e d&#x2019;expression de comparaison et d&#x2019;ope&#x301;rateur ET, OU et NON. Une expression est constitue&#x301;e d&#x2019;un attribut, d&#x2019;un ope&#x301;rateur de comparaison et d&#x2019;une valeur. Ainsi, un filtre de recherche peut ressembler a ceci :</p>
+<pre><code>(&amp;(objectclass=person)(cn=laurent))
+</code></pre><p>Dans cet exemple, la recherche ne retournera que les entre&#x301;es dont la classe est de type <em>person</em> et l&#x2019;attribut <em>cn</em> vaut &quot;laurent&quot;. Le caracte&#x300;re * permet de prendre en compte toutes les valeurs rencontre&#x301;es. Ainsi, le filtre <em>(objectclass=\</em>)* retournera toutes les entre&#x301;es quelle que soit leur classe d&#x2019;objet.</p>
+<h2 id="1-4-4-le-mod%C3%A8le-de-s%C3%A9curit%C3%A9">1.4.4 Le mod&#xE8;le de s&#xE9;curit&#xE9;</h2>
+<p>Dans un re&#x301;seau informatique, la se&#x301;curite&#x301; est tre&#x300;s importante. En effet, envoyer des donne&#x301;es sensibles sur un re&#x301;seau constitue toujours un risque. Des personnes mal inten- tionne&#x301;es peuvent intercepter des messages transmis sur le re&#x301;seau, s&#x2019;en servir pour s&#x2019;in- troduire dans un syste&#x300;me et causer des de&#x301;ga&#x302;ts. Pour cela des donne&#x301;es critiques comme les mots de passe devraient e&#x302;tre prote&#x301;ge&#x301;es durant leur transfert (et ne pas circuler en clair sur le re&#x301;seau comme le font des protocoles comme http, ftp, telnet...). De plus, quand il est question de partager des ressources sur un re&#x301;seau, il est important de s&#x2019;as- surer que l&#x2019;utilisateur ou le client qui re&#x301;clame l&#x2019;information est bien celui qu&#x2019;il pre&#x301;tend e&#x302;tre et savoir ce qu&#x2019;il peut faire une fois authentifie&#x301;. La se&#x301;curite&#x301; comprend en ge&#x301;ne&#x301;ral plusieurs aspects dont :</p>
+<ul>
+<li><p><strong>L&#x2019;authentification :</strong> </p>
+<p> s&#x2019;assurer que l&#x2019;utilisateur est bien celui qu&#x2019;il pre&#x301;tend e&#x302;tre.</p>
+</li>
+<li><p><strong>La confidentialite&#x301; :</strong></p>
+<p> prote&#x301;ger les informations a&#x300; l&#x2019;aide de cryptage pour qu&#x2019;elles ne soient pas compre&#x301;hensibles par un tiers.</p>
+</li>
+<li><p><strong>L&#x2019;inte&#x301;grite&#x301; :</strong></p>
+<p>s&#x2019;assurer que l&#x2019;information ne soit pas alte&#x301;re&#x301;e par un tiers avant d&#x2019;arriver a&#x300; destination.</p>
+</li>
+<li><p><strong>Les habilitations :</strong></p>
+<p> s&#x2019;assurer que l&#x2019;utilisateur posse&#x300;de bien les droits de lecture ou d&#x2019;e&#x301;criture sur des donne&#x301;es.</p>
+</li>
+</ul>
+<p>Pour ce qui est du standard LDAP, il prend en compte ces concepts et offre diffe&#x301;rentes solutions.</p>
+<h3 id="l%E2%80%99authentification">L&#x2019;authentification</h3>
+<p>Re&#x301;alise&#x301;e lors de la connexion, l&#x2019;authentification permet de s&#x2019;assurer de l&#x2019;identite&#x301; d&#x2019;un client et de de&#x301;terminer ses droits. Il existe deux niveaux d&#x2019;authentification. Le premier est base&#x301; sur la ve&#x301;rification du couple nom d&#x2019;utilisateur et mot de passe. Le deuxie&#x300;me niveau, appele&#x301; authentification forte s&#x2019;appuie sur quelque chose que posse&#x300;de l&#x2019;utilisateur comme par exemple un certificat.</p>
+<p>L&#x2019;authentification LDAP, propose plusieurs me&#x301;canismes de se&#x301;curite&#x301; couvrant les deux niveaux. Mais avant de continuer, il est important de comprendre comment se re&#x301;alise l&#x2019;authentification du client LDAP. C&#x2019;est au moment de l&#x2019;ope&#x301;ration de connexion ou binding (voir <a href="">Le mode&#x300;le fonctionnel</a>) que le client fournit son identification. Pour ce faire, le client envoie plusieurs informations au serveur :</p>
+<ul>
+<li>la version du standard LDAP a&#x300; utiliser (2 ou 3)</li>
+<li>le DN (Distinguished Name) avec lequel il de&#x301;sir s&#x2019;authentifier</li>
+<li>la me&#x301;thode d&#x2019;authentification a&#x300; utiliser</li>
+</ul>
+<p>Une fois ces informations envoye&#x301;es au serveur, ce dernier peut ve&#x301;rifier si l&#x2019;entre&#x301;e correspondant a&#x300; l&#x2019;identifiant du client (le DN envoye&#x301;) existe bien dans l&#x2019;annuaire. Si l&#x2019;entre&#x301;e est retrouve&#x301;e, le serveur peut contro&#x302;ler les parame&#x300;tres d&#x2019;authentification et valider ou non l&#x2019;authentification du client. Une fois authentifie&#x301;, le client peut effectuer des ope&#x301;rations de recherche et de mise a&#x300; jour en fonction du niveau d&#x2019;habilitation qu&#x2019;il posse&#x300;de (voir <a href="">La gestion des habilitations</a>).</p>
+<p>Le standard LDAPv3 (LDAP version 3) de&#x301;finit plusieurs me&#x301;canismes d&#x2019;authentification :</p>
+<ul>
+<li>authentification anonyme</li>
+<li>authentification simple</li>
+<li>authentification simple sur SSL/TLS (<em>Secured Socket Layer/Transport Layer Security</em>)</li>
+<li>authentification forte avec SASL (<em>Simple Authentication and Security Layer</em>).</li>
+</ul>
+<h3 id="authentification-anonyme">Authentification anonyme</h3>
+<p>C&#x2019;est la me&#x301;thode d&#x2019;authentification la plus simple. Cette solution ne doit e&#x302;tre utilise&#x301;e que si les donne&#x301;es ne ne&#x301;cessitent pas une grande se&#x301;curite&#x301;. Elle est souvent employe&#x301;e quand les donne&#x301;es stocke&#x301;es dans l&#x2019;annuaire peuvent e&#x302;tre consulte&#x301;es par tout le monde.</p>
+<p>Pour obtenir un acce&#x300;s anonyme, le client va s&#x2019;authentifier avec un DN et un mot de passe vide. Si le serveur accepte les connexions anonymes, le client sera authentifie&#x301; et obtiendra les droits de&#x301;finis pour les utilisateurs anonymes.</p>
+<h3 id="authentification-simple">Authentification simple</h3>
+<p>L&#x2019;authentification simple consiste a&#x300; ve&#x301;rifier le mot de passe envoye&#x301; par le client et celui enregistre&#x301; dans l&#x2019;annuaire. Pour cela, le serveur compare le mot de passe du client et la valeur de l&#x2019;attribut <em>userPassord</em> de l&#x2019;entre&#x301;e correspondant au DN fournit.</p>
+<p>Si le mot de passe n&#x2019;est pas stocke&#x301; en clair dans l&#x2019;annuaire, le serveur <em>hash</em> ou <em>chiffre</em> le mot de passe avant de le comparer avec celui envoye&#x301; par le client. Si la comparaison re&#x301;ussi, le client est authentifie&#x301;.</p>
+<p>Me&#x302;me si ce me&#x301;canisme est supporte&#x301; par les versions 2 et 3 de LDAP, il a l&#x2019;incon- ve&#x301;nient de transmettre le mot de passe en clair sur le re&#x301;seau. Une solution consiste a&#x300; utiliser SSL/TLS pour prote&#x301;ger les messages e&#x301;change&#x301;s entre le client et le serveur.</p>
+<h3 id="authentification-simple-sur-ssl-tls">Authentification simple sur SSL/TLS</h3>
+<p>Le protocole SSL (<em>Secured Socket Layer</em>), issu du monde Internet, est utilise&#x301; pour se&#x301;curiser les e&#x301;changes entre un serveur et un client. SSL est notamment utilise&#x301; pour se&#x301;curiser des protocoles comme HTTP, FTP, SMTP, etc. Le protocole SSL est main- tenant normalise&#x301; par l&#x2019;IETF et a e&#x301;te&#x301; renomme&#x301; TLS (<em>Transport Layer Security</em>).</p>
+<p>Le protocole LDAP peut e&#x301;galement utiliser SSL pour se&#x301;curiser les donne&#x301;es e&#x301;change&#x301;es lors d&#x2019;une session. Avec la version 3 de LDAP, il est possible d&#x2019;utiliser SSL de deux fac&#x327;ons :</p>
+<ul>
+<li><p><em>LDAPS</em> : L&#x2019;utilisation de LDAP sur SSL ne&#x301;cessite l&#x2019;utilisation du port 636 au lieu du nume&#x301;ro de port 389 dans le cas de sessions classiques (non se&#x301;curise&#x301;es).</p>
+</li>
+<li><p><em>StartTLS</em> : L&#x2019;inconve&#x301;nient de LDAPS est l&#x2019;utilisation de deux ports. Avec StartTLS, le serveur peut ne&#x301;gocier des sessions se&#x301;curise&#x301;es ou non sur le me&#x302;me port (habituellement le 389).</p>
+</li>
+</ul>
+<p>Me&#x302;me si SSL permet une authentification serveur (le client authentifie le serveur) et une authentification cliente (le serveur authentifie le client) au moyen de certificat, l&#x2019;authentification simple sur SSL/TLS ne diffe&#x300;re pas de l&#x2019;authentification simple traditionnelle. SSL est utilise&#x301; pour crypter le trafic entre le serveur et le client afin de garantir la confidentialite&#x301; de la communication et l&#x2019;inte&#x301;grite&#x301; des donne&#x301;es e&#x301;change&#x301;es.</p>
+<h3 id="authentification-forte-avec-sasl">Authentification forte avec SASL</h3>
+<p>SASL (<em>Simple Authentication and Security Layer</em>) est un standard inde&#x301;pendant de LDAP permettant au client et au serveur de ne&#x301;gocier une me&#x301;thode d&#x2019;authentification. En plus du mode d&#x2019;authentification, le client et le serveur peuvent se mettre d&#x2019;accord sur l&#x2019;utilisation d&#x2019;une couche de se&#x301;curite&#x301; comme SSL/TLS. Cette dernie&#x300;re n&#x2019;a rien a&#x300; voir avec LDAPS ou StartTLS.</p>
+<p>Depuis LDAPv3, il est possible d&#x2019;utiliser SASL mais les me&#x301;canismes d&#x2019;authentifica- tion supporte&#x301;s de&#x301;pendent des capacite&#x301;s du client et du serveur. Parmi les me&#x301;canismes associe&#x301;s a&#x300; SASL on retrouve notamment :</p>
+<ul>
+<li><p><strong>CRAM-MD5 (<em>Challenge Response Authentication Mechanism with Message Digest 5</em>) :</strong></p>
+<p> Base&#x301; sur le me&#x301;canisme de hachage MD5 (<em>Message Digest 5</em>), il e&#x301;vite de transmettre le mot de passe en clair sur le re&#x301;seau.</p>
+</li>
+<li><p><strong>DIGEST-MD5 :</strong></p>
+<p> Version ame&#x301;liore&#x301;e de CRAM-MD5.</p>
+</li>
+<li><p><strong>Kerberos v4 :</strong> </p>
+<p> Utilisation du protocole Kerberos<sup><a href="#fn_3" id="reffn_3">3</a></sup> version 4.</p>
+</li>
+<li><p><strong>GSSAPI (Generic Security Service Application Program Interface) :</strong></p>
+<p> Utilisation du protocole Kerberos 3 version 5.</p>
+</li>
+</ul>
+<h3 id="la-gestion-des-habilitations">La gestion des habilitations</h3>
+<p>Me&#x302;me si LDAPv3 ne de&#x301;finit pas de me&#x301;canisme pour la gestion des habilitations, la plupart des produits pre&#x301;sents sur le marche&#x301; offre leur propre imple&#x301;mentation de ce me&#x301;canisme.</p>
+<p>La gestion des habilitations consiste a&#x300; de&#x301;finir des droits d&#x2019;acce&#x300;s sur les e&#x301;le&#x301;ments de l&#x2019;annuaire a&#x300; l&#x2019;aide d&#x2019;un ensemble de re&#x300;gles appele&#x301;es ACL (<em>Access Check List</em>). Chaque ACL est constitue&#x301;e d&#x2019;une se&#x301;rie d&#x2019;ACI (<em>Access Control Item</em>) qui de&#x301;terminent les droits d&#x2019;acce&#x300;s d&#x2019;un utilisateur ou d&#x2019;un groupe a&#x300; une ressource.</p>
+<p>L&#x2019;exemple donne&#x301; par la suite est une ACL imple&#x301;mente&#x301;e par le logiciel OpenLDAP <sup><a href="#fn_4" id="reffn_4">4</a></sup>. L&#x2019;avantage des listes de contro&#x302;le d&#x2019;acce&#x300;s de OpenLDAP est une syntaxe simple et puissante.</p>
+<pre><code>access to *
+    by * read
+</code></pre><p>Les ACL de OpenLDAP permettent de re&#x301;pondre a&#x300; la question qui a acce&#x300;s a&#x300; quoi ?. Dans l&#x2019;exemple donne&#x301; plus haut, l&#x2019;ACL autorise l&#x2019;acce&#x300;s en lecture a&#x300; tous les utilisateurs anonymes ou authentifie&#x301;s (by <em> read) et ce, sur tous les e&#x301;le&#x301;ments de l&#x2019;annuaire (access to </em>). Les ACL de OpenLDAP sont vus en de&#x301;tail au <a href="">Chapitre 4</a>.</p>
+<p><sup><a href="#fn_2" id="reffn_2">2</a></sup>Cre&#x301;er par Microsoft, Active Directory est l&#x2019;imple&#x301;mentation du service d&#x2019;annuaire LDAP pour l&#x2019;environnement Windows.</p>
+<p><sup><a href="#fn_3" id="reffn_3">3</a></sup>Kerberos est un protocole d&#x2019;authentification re&#x301;seau cre&#x301;e&#x301; au MIT (Massachusetts Institute of Tech- nology). Kerberos utilise un syste&#x300;me de tickets au lieu de mots de passe en texte clair. Ce principe renforce la se&#x301;curite&#x301; du syste&#x300;me et empe&#x302;che que des personnes non autorise&#x301;es interceptent les mots de passe des utilisateurs.</p>
+<p><sup><a href="#fn_4" id="reffn_4">4</a></sup>OpenLDAP est une imple&#x301;mentation libre et open-source du protocole LDAP (<a href="http://www.openldap.org/" target="_blank">http://www.openldap.org/</a>).</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ch1/section3.html" class="navigation navigation-prev " aria-label="Previous page: Le protocole"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ch1/section5.html" class="navigation navigation-next " aria-label="Next page: Le format d&#39;échange"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

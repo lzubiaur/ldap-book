@@ -1,0 +1,24 @@
+--- servers/slapd/result.c      2003-02-28 18:07:14.000000000 +0100
++++ servers/slapd/result.c      2003-07-16 15:30:01.000000000 +0200
+@@ -885,7 +885,9 @@
+                if ( attrs == NULL ) {
+                        /* all attrs request, skip operational attributes */
+                        if( is_at_operational( desc->ad_type ) ) {
+-                               continue;
++                               if (strcasecmp( e->e_dn, LDAP_ROOT_DSE )) {
++                                       continue;
++                               }
+                        }
+
+                } else {
+@@ -1080,7 +1082,9 @@
+                if ( attrs == NULL ) {
+                        /* all attrs request, skip operational attributes */
+                        if( is_at_operational( desc->ad_type ) ) {
+-                               continue;
++                               if (strcasecmp( e->e_dn, LDAP_ROOT_DSE )) {
++                                       continue;
++                               }
+                        }
+
+                } else {

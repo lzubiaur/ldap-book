@@ -1,0 +1,8 @@
+# ldaplist
+dn: ou=People, dc=inpres,dc=be
+
+dn: ou=Group, dc=inpres,dc=be
+
+dn: ou=Hosts, dc=inpres,dc=be
+
+dn: ou=Profile, dc=inpres,dc=be

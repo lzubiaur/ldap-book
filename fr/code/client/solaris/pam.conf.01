@@ -1,0 +1,18 @@
+# PAM configuration
+#
+
+login	auth requisite		pam_authtok_get.so.1
+login	auth required		pam_dhkeys.so.1
+login	auth required		pam_unix_auth.so.1
+login	auth required		pam_dial_auth.so.1
+
+other	auth requisite		pam_authtok_get.so.1
+other	auth required		pam_dhkeys.so.1
+other	auth required		pam_unix_auth.so.1
+
+...
+
+other	password required	pam_dhkeys.so.1
+other	password requisite	pam_authtok_get.so.1
+other	password requisite	pam_authtok_check.so.1
+other	password required	pam_authtok_store.so.1

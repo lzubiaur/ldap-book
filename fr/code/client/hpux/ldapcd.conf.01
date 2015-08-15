@@ -1,0 +1,19 @@
+# configuration file for ldapcd
+#
+
+directory:	10.59.4.8      
+searchbase:     "dc=inpres,dc=be"
+port:		389
+connections:	6
+max_threads:	64
+debug:		1
+
+machine_dn:
+machine_pass:
+
+pw_cachesize:	2000
+pw_expirecache:	120
+gr_cachesize:	100
+gr_expirecache: 600
+
+...

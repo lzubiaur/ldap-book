@@ -1,0 +1,969 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Authentification SSL | Étude et Implémentation de LDAP Sécurisé</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ch4/section2.html" />
+    
+    
+    <link rel="prev" href="../ch4/index.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="4.1" data-basepath=".." data-revision="Sat Aug 15 2015 14:44:01 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Tapez pour rechercher" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ch1/index.html">
+            
+                
+                    <a href="../ch1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Généralités sur le standard LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch1/section1.html">
+            
+                
+                    <a href="../ch1/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Le service d&#39;annuaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1/section2.html">
+            
+                
+                    <a href="../ch1/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Le standard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch1/section3.html">
+            
+                
+                    <a href="../ch1/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Le protocole
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch1/section4.html">
+            
+                
+                    <a href="../ch1/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Les modèles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch1/section5.html">
+            
+                
+                    <a href="../ch1/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Le format d&#39;échange
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Contexte
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch2/section2.html">
+            
+                
+                    <a href="../ch2/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        OpenLDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ch2/section3.html">
+            
+                
+                    <a href="../ch2/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Configuration du serveur
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch2/section4.html">
+            
+                
+                    <a href="../ch2/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch2/section5.html">
+            
+                
+                    <a href="../ch2/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch2/section6.html">
+            
+                
+                    <a href="../ch2/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/section7.html">
+            
+                
+                    <a href="../ch2/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch3/index.html">
+            
+                
+                    <a href="../ch3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Authentification LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch3/section1.html">
+            
+                
+                    <a href="../ch3/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Auth. et centralisation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch3/section2.html">
+            
+                
+                    <a href="../ch3/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch3/section3.html">
+            
+                
+                    <a href="../ch3/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch3/section4.html">
+            
+                
+                    <a href="../ch3/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch3/section5.html">
+            
+                
+                    <a href="../ch3/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Plusieurs home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch3/section6.html">
+            
+                
+                    <a href="../ch3/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Récapitulatif
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch4/index.html">
+            
+                
+                    <a href="../ch4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LDAP sécurisé
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="4.1" data-path="ch4/section1.html">
+            
+                
+                    <a href="../ch4/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Authentification SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ch4/section2.html">
+            
+                
+                    <a href="../ch4/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Certificats
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch4/section3.html">
+            
+                
+                    <a href="../ch4/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        OpenLDAP et SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ch4/section4.html">
+            
+                
+                    <a href="../ch4/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch4/section5.html">
+            
+                
+                    <a href="../ch4/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch4/section6.html">
+            
+                
+                    <a href="../ch4/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Tru64 v5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch4/section7.html">
+            
+                
+                    <a href="../ch4/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Tru64 v5.0
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ch4/section8.html">
+            
+                
+                    <a href="../ch4/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Messages LDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="ch4/section9.html">
+            
+                
+                    <a href="../ch4/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        ACL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="ch4/section10.html">
+            
+                
+                    <a href="../ch4/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        Mots de passe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch5/index.html">
+            
+                
+                    <a href="../ch5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Le protocole Kerberos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch5/section1.html">
+            
+                
+                    <a href="../ch5/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Présentation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ch5/section2.html">
+            
+                
+                    <a href="../ch5/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Fonctionnement
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch5/section3.html">
+            
+                
+                    <a href="../ch5/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="conclusion.html">
+            
+                
+                    <a href="../conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="code.html">
+            
+                
+                    <a href="../code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Fichiers de configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="glossaire.html">
+            
+                
+                    <a href="../glossaire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Glossaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="bibliographie.html">
+            
+                
+                    <a href="../bibliographie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Bibliographie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="abstract.html">
+            
+                
+                    <a href="../abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Abstract
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Publié avec GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table des matières"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Recherche"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Paramètres de Police"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Clair</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Nuit</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Partage"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Partager sur Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Partager sur Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Partager sur Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Partager sur Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Partager sur Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Étude et Implémentation de LDAP Sécurisé</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="4-1-authentification-simple-sur-ssl-tls">4.1 Authentification simple sur SSL/TLS</h2>
+<p>La plus grosse partie du chapitre est de&#x301;die&#x301;e a&#x300; la confidentialite&#x301; des mots de passe utilise&#x301;s pour s&#x2019;authentifier aupre&#x300;s du serveur LDAP. En effet, depuis sa version 3, LDAP offre une confidentialite&#x301; des e&#x301;changes a&#x300; travers le support d&#x2019;une couche de se&#x301;curite&#x301;. Les messages LDAP ne sont plus transmis tels quels mais sont ve&#x301;hicule&#x301;s via le protocole SSL (<em>Secured Socket Layer</em>).</p>
+<h3 id="4-1-1-le-protocole-ssl">4.1.1 Le protocole SSL</h3>
+<p>Issu du monde Internet, SSL est un protocole re&#x301;seau permettant de se&#x301;curiser les e&#x301;changes entre un serveur et un client. Cre&#x301;er par Netscape en 1994, il est normalise&#x301; par l&#x2019;IETF en 1999 sous le nom de TLS (<em>Transport Layer Security</em>).</p>
+<p>Situe&#x301; entre la couche applicative et la couche de transport de la pile de protocole TCP/IP, SSL a la caracte&#x301;ristique d&#x2019;e&#x302;tre inde&#x301;pendant du protocole applicatif utilise&#x301;. Ainsi, l&#x2019;usage de SSL avec des protocoles comme http, ftp, smtp et ldap est possible. La figure 4.1 illustre ce principe.</p>
+<p><img src="../images/image_4.1.png" alt="Fig. 4.1 - La couche SSL"></p>
+<blockquote>
+<p>Fig. 4.1 - La couche SSL</p>
+</blockquote>
+<p>L&#x2019;utilisation du protocole SSL comme couche de se&#x301;curite&#x301; garantit :</p>
+<ul>
+<li>l&#x2019;authentification du serveur et du client (facultatif) a&#x300; l&#x2019;aide de certificats et de signatures digitales.</li>
+<li>la confidentialite&#x301; des donne&#x301;es avec le chiffrement syme&#x301;trique des donne&#x301;es.</li>
+<li>le contro&#x302;le de l&#x2019;inte&#x301;grite&#x301; des donne&#x301;es avec les digests et les MAC.</li>
+</ul>
+<p>Avant de regarder de plus pre&#x300;s le fonctionnement de SSL, quelques explications e&#x301;le&#x301;mentaires sur les diffe&#x301;rentes techniques employe&#x301;es en cryptographie s&#x2019;imposent.</p>
+<h4 id="chiffrement-syme%CC%81trique-et-asyme%CC%81trique">Chiffrement syme&#x301;trique et asyme&#x301;trique</h4>
+<p>Pour assurer la confidentialite&#x301; des donne&#x301;es, l&#x2019;e&#x301;metteur chiffre le message et le re&#x301;cepteur le de&#x301;chiffre a&#x300; l&#x2019;aide d&#x2019;une cle&#x301;. Deux algorithmes de chiffrement existent :</p>
+<ul>
+<li><p>le chiffrement <em>syme&#x301;trique</em> : le re&#x301;cepteur et l&#x2019;e&#x301;metteur utilisent la me&#x302;me cle&#x301; pour chiffrer et de&#x301;chiffrer les messages. Cette cle&#x301; est appele&#x301;e cle&#x301; secre&#x300;te. Les plus connus des algorithmes syme&#x301;triques sont sans doute DES (Data Encryption Standard) et TripleDES.</p>
+</li>
+<li><p>le chiffrement <em>asyme&#x301;trique</em> : cette me&#x301;thode est base&#x301;e sur l&#x2019;utilisation d&#x2019;une <em>cle&#x301; publique</em> (pour le chiffrement) et d&#x2019;une <em>cle&#x301; prive&#x301;e</em> (pour le de&#x301;chiffrement). Le message chiffre&#x301; avec la cle&#x301; publique ne peut e&#x302;tre de&#x301;chiffre&#x301; qu&#x2019;avec la cle&#x301; prive&#x301;e. Ainsi, si A veut transmettre un message a&#x300; B, il se procure la cle&#x301; publique de B qui est utilise&#x301;e pour chiffrer le message. B rec&#x327;oit ensuite le message qu&#x2019;il de&#x301;chiffre avec sa cle&#x301; prive&#x301;e. B e&#x301;tant le seul a&#x300; posse&#x301;der la cle&#x301; prive&#x301;e, il est le seul a&#x300; pouvoir de&#x301;chiffrer le message de A (voir figure 4.2). L&#x2019;algorithme asyme&#x301;trique RSA (R.Rivest, A.Shamir &amp; L.Adleman) est l&#x2019;algorithme asyme&#x301;trique le plus re&#x301;pandu.</p>
+</li>
+</ul>
+<p><img src="../images/image_4.2.png" alt="Principe du chiffrement asyme&#x301;trique"></p>
+<blockquote>
+<p>Principe du chiffrement asyme&#x301;trique</p>
+</blockquote>
+<h4 id="message-digest-et-mac">Message digest et MAC</h4>
+<p>L&#x2019;inte&#x301;grite&#x301; des donne&#x301;es est base&#x301;e sur le calcul d&#x2019;un message digest obtenu par une <em>fonction de hachage</em> sur le message a&#x300; envoyer. Un message digest est une valeur de taille fixe, unique et spe&#x301;cifique a&#x300; un message. Son calcul permet de de&#x301;finir une sorte d&#x2019;empreinte digitale du message. L&#x2019;inte&#x301;grite&#x301; d&#x2019;un message est ve&#x301;rifie&#x301;e en comparant le digest calcule&#x301; par l&#x2019;expe&#x301;diteur et le digest calcule&#x301; par le re&#x301;cepteur. Si les deux valeurs coi&#x308;ncident, le message n&#x2019;a pas e&#x301;te&#x301; modifie&#x301; lors de sont transfert. Les algorithmes de message digest les plus courants sont MD5 (<em>Message Digest 5</em>) et SHA (<em>Secure Hash Algorithm</em>).</p>
+<p>Les MAC (<em>Message Authentication Code</em>) permettent l&#x2019;inte&#x301;grite&#x301; des donne&#x301;es mais e&#x301;galement l&#x2019;authentification. Il existe trois types de MAC :</p>
+<ul>
+<li>MAC simple hache&#x301; : re&#x301;sultat d&#x2019;une fonction de hachage.</li>
+<li>MAC simple a&#x300; cle&#x301; : re&#x301;sultat d&#x2019;un chiffrement syme&#x301;trique.</li>
+<li>MAC complexe a&#x300; cle&#x301; et hachage : le message est chiffre&#x301; avant de construire le MAC.</li>
+</ul>
+<h4 id="signatures-digitales-et-certificats">Signatures digitales et certificats</h4>
+<p>L&#x2019;utilisation de signatures digitales permet de s&#x2019;assurer de l&#x2019;inte&#x301;grite&#x301; d&#x2019;un message et de l&#x2019;authentification de l&#x2019;e&#x301;metteur. Une signature digitale est construite en deux e&#x301;tapes :</p>
+<ol>
+<li>Un message digest est calcule&#x301; sur le message a&#x300; envoyer.</li>
+<li>La valeur obtenue est chiffre&#x301;e au moyen de la cle&#x301; prive&#x301;e de l&#x2019;expe&#x301;diteur.</li>
+</ol>
+<p>Le message et la signature associe&#x301;s sont envoye&#x301;s au re&#x301;cepteur qui proce&#x300;de de la sorte :</p>
+<ol>
+<li>Il de&#x301;chiffre la signature digitale a&#x300; l&#x2019;aide de la cle&#x301; publique de l&#x2019;expe&#x301;diteur et obtient le digest associe&#x301; au message.</li>
+<li>Il calcule un nouveau message digest sur le message rec&#x327;u et le compare au digest obtenu en de&#x301;chiffrant la signature. Si les digests coincident, le re&#x301;cepteur est assure&#x301; de l&#x2019;inte&#x301;grite&#x301; du message et de l&#x2019;authentification du signataire. En effet, le de&#x301;chiffrement d&#x2019;une signature construite avec une cle&#x301; prive&#x301;e autre que celle associe&#x301;e a&#x300; la cle&#x301; publique du signataire aurait donne&#x301; un digest incorrect.</li>
+</ol>
+<p>Les algorithmes asyme&#x301;triques e&#x301;tant base&#x301;s sur le partage de cle&#x301;s publiques, il est primordial de s&#x2019;assurer de leur validite&#x301;. Pour cela, il est possible d&#x2019;obtenir un certificat attestant l&#x2019;appartenance d&#x2019;une cle&#x301; publique. Ce certificat, signe&#x301; par une autorite&#x301; de certification (CA ou <em>Certification Authority</em>) reconnue de tous, garantira que la cle&#x301; publique apparient bien a&#x300; une personne. Un certificat contiendra essentiellement :</p>
+<ul>
+<li>l&#x2019;identite&#x301; du proprie&#x301;taire de la cle&#x301; publique</li>
+<li>la cle&#x301; publique en question</li>
+<li>l&#x2019;identification de l&#x2019;autorite&#x301; de certification (CA)</li>
+<li>la signature digitale de cet autorite&#x301; de certification</li>
+<li>une date de validite&#x301; du certificat.</li>
+</ul>
+<p>Une fois que le certificat et la cle&#x301; publique qu&#x2019;il contient sont obtenus, il faut encore valider ce certificat. Ceci est fait en ve&#x301;rifiant la signature digitale du CA comme explique&#x301; plus haut. La seule contrainte est de posse&#x301;der la cle&#x301; publique du CA.</p>
+<h3 id="4-1-2-fonctionnement-de-ssl">4.1.2 Fonctionnement de SSL</h3>
+<p>Pour e&#x301;tablir une session SSL, le client et le serveur doivent passer par diffe&#x301;rentes e&#x301;tapes. Elles sont reprises et explique&#x301;es ci-dessous :</p>
+<ol>
+<li>Le client se connecte au serveur sur un port se&#x301;curise&#x301; (le protocole https utilise le port 443 au lieu de 80 pour http) et lui communique les options SSL supporte&#x301;es.</li>
+<li>Le serveur re&#x301;pond en envoyant son certificat contenant sa cle&#x301; prive&#x301;e</li>
+<li>Le client authentifie ou non le serveur en ve&#x301;rifiant la validite&#x301; de son certificat</li>
+<li>Le serveur peut authentifie&#x301; le client en lui re&#x301;clamant un certificat</li>
+<li>Le client envoie au serveur un message chiffre&#x301; avec la cle&#x301; publique du serveur. Ce dernier est le seul a pouvoir de&#x301;chiffrer le message a&#x300; l&#x2019;aide de sa cle&#x301; prive&#x301;e. A partir de ce message les deux extre&#x301;mite&#x301;s construisent une <em>cle&#x301; de session</em>.</li>
+<li>le client et le serveur chiffrent les donne&#x301;es e&#x301;change&#x301;es avec la cle&#x301; de session</li>
+</ol>
+<h3 id="4-1-3-ldap-et-ssl">4.1.3 LDAP et SSL</h3>
+<p>L&#x2019;avantage de SSL est sa transparence par rapport au protocole TCP et son inde&#x301;pendance par rapport aux applications qui l&#x2019;utilisent. Ainsi, de nombreux protocoles non se&#x301;curise&#x301;s s&#x2019;appuient sur SSL pour offrir une version se&#x301;curise&#x301;e. Le tableau suivant fournit quelques exemples de protocoles non se&#x301;curise&#x301;s et leur version se&#x301;curise&#x301;e.</p>
+<table>
+<thead>
+<tr>
+<th>protocole</th>
+<th>port</th>
+<th>version s&#xE9;curis&#xE9;</th>
+<th>port</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>http</td>
+<td>80</td>
+<td>https</td>
+<td>443</td>
+</tr>
+<tr>
+<td>ftp</td>
+<td>21</td>
+<td>ftps</td>
+<td>990</td>
+</tr>
+<tr>
+<td>telnet</td>
+<td>23</td>
+<td>telnets</td>
+<td>992</td>
+</tr>
+<tr>
+<td>imap</td>
+<td>143</td>
+<td>imaps</td>
+<td>993</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 4.1 - Protocoles s&#xE9;curis&#xE9;s</p>
+</blockquote>
+<p>Le protocole SSL est e&#x301;galement utilise&#x301; pour se&#x301;curiser une session LDAP. L&#x2019;usage de LDAP sur SSL est appele&#x301; <strong>LDAPS</strong> et utilise le port 636 au lieu du port 389 (LDAP non se&#x301;curise&#x301;). L&#x2019;inconve&#x301;nient de LDAPS est qu&#x2019;il est impossible d&#x2019;avoir des connexions se&#x301;curise&#x301;es et non se&#x301;curise&#x301;es sur le me&#x302;me port (le 389 par exemple). Pour cela, LDAPv3 a&#x300; introduit une nouvelle extension : <em>StartTLS</em>. Cette commande permet de ne&#x301;gocier l&#x2019;utilisation de sessions se&#x301;curise&#x301;es ou non sur le port standard 389. Les diffe&#x301;rentes e&#x301;tapes pour mettre en oeuvre SSL avec LDAP sont de&#x301;crites ci-dessous :</p>
+<ol>
+<li>Cre&#x301;er une paire de cle&#x301;s asyme&#x301;triques (publique et prive&#x301;e) pour le serveur. 2. Obtenir un certificat aupre&#x300;s d&#x2019;une autorite&#x301; de certification (CA).</li>
+<li>Faire de me&#x302;me pour le client (facultatif).</li>
+<li>Configurer le serveur LDAP pour qu&#x2019;il prenne en charge SSL.</li>
+<li>Configurer le client LDAP.</li>
+</ol>
+<p>Une fois que le client et le serveur LDAP sont configure&#x301;s pour utiliser SSL, le client peut contacter le serveur et ne&#x301;gocier une session se&#x301;curise&#x301;e avant de s&#x2019;authentifier. Ainsi, l&#x2019;identifiant et le mot de passe sont prote&#x301;ge&#x301;s et ne transitent plus en clair sur le re&#x301;seau.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ch4/index.html" class="navigation navigation-prev " aria-label="Previous page: LDAP sécurisé"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ch4/section2.html" class="navigation navigation-next " aria-label="Next page: Certificats"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

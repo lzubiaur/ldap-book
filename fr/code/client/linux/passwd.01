@@ -1,0 +1,4 @@
+# The PAM configuration file for the Shadow `passwd' service
+
+password   sufficient pam_unix.so nullok obscure min=4 max=8
+password   required   pam_ldap.so

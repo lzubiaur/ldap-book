@@ -1,0 +1,16 @@
+# ldapsearch -b dc=inpres,dc=be -M simple -h 10.59.4.8 "objectClass=*"
+dc=inpres,dc=be
+objectClass=dcObject
+objectClass=organization
+dc=inpres
+o=dc=inpres,dc=be
+
+ou=accounts,dc=inpres,dc=be
+objectClass=organizationalunit
+ou=accounts
+description=Accounts
+
+ou=groups,dc=inpres,dc=be
+objectClass=organizationalunit
+ou=groups
+description=groups

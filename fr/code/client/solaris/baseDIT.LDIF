@@ -1,0 +1,8 @@
+dn: dc=inpres,dc=be
+associatedDomain: inpres.be
+dc: inpres
+objectClass: top
+objectClass: domain
+objectClass: domainRelatedObject
+objectClass: nisDomainObject
+nisDomain: inpres.be

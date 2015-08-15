@@ -1,0 +1,1069 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Configuration du serveur | Étude et Implémentation de LDAP Sécurisé</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ch2/section4.html" />
+    
+    
+    <link rel="prev" href="../ch2/section2.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="2.3" data-basepath=".." data-revision="Sat Aug 15 2015 14:44:01 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Tapez pour rechercher" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ch1/index.html">
+            
+                
+                    <a href="../ch1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Généralités sur le standard LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch1/section1.html">
+            
+                
+                    <a href="../ch1/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Le service d&#39;annuaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1/section2.html">
+            
+                
+                    <a href="../ch1/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Le standard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch1/section3.html">
+            
+                
+                    <a href="../ch1/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Le protocole
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch1/section4.html">
+            
+                
+                    <a href="../ch1/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Les modèles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch1/section5.html">
+            
+                
+                    <a href="../ch1/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Le format d&#39;échange
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Contexte
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch2/section2.html">
+            
+                
+                    <a href="../ch2/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        OpenLDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.3" data-path="ch2/section3.html">
+            
+                
+                    <a href="../ch2/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Configuration du serveur
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch2/section4.html">
+            
+                
+                    <a href="../ch2/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch2/section5.html">
+            
+                
+                    <a href="../ch2/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch2/section6.html">
+            
+                
+                    <a href="../ch2/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/section7.html">
+            
+                
+                    <a href="../ch2/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch3/index.html">
+            
+                
+                    <a href="../ch3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Authentification LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch3/section1.html">
+            
+                
+                    <a href="../ch3/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Auth. et centralisation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch3/section2.html">
+            
+                
+                    <a href="../ch3/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch3/section3.html">
+            
+                
+                    <a href="../ch3/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch3/section4.html">
+            
+                
+                    <a href="../ch3/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch3/section5.html">
+            
+                
+                    <a href="../ch3/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Plusieurs home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch3/section6.html">
+            
+                
+                    <a href="../ch3/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Récapitulatif
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch4/index.html">
+            
+                
+                    <a href="../ch4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LDAP sécurisé
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ch4/section1.html">
+            
+                
+                    <a href="../ch4/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Authentification SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ch4/section2.html">
+            
+                
+                    <a href="../ch4/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Certificats
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch4/section3.html">
+            
+                
+                    <a href="../ch4/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        OpenLDAP et SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ch4/section4.html">
+            
+                
+                    <a href="../ch4/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch4/section5.html">
+            
+                
+                    <a href="../ch4/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch4/section6.html">
+            
+                
+                    <a href="../ch4/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Tru64 v5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch4/section7.html">
+            
+                
+                    <a href="../ch4/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Tru64 v5.0
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ch4/section8.html">
+            
+                
+                    <a href="../ch4/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Messages LDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="ch4/section9.html">
+            
+                
+                    <a href="../ch4/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        ACL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="ch4/section10.html">
+            
+                
+                    <a href="../ch4/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        Mots de passe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch5/index.html">
+            
+                
+                    <a href="../ch5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Le protocole Kerberos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch5/section1.html">
+            
+                
+                    <a href="../ch5/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Présentation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ch5/section2.html">
+            
+                
+                    <a href="../ch5/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Fonctionnement
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch5/section3.html">
+            
+                
+                    <a href="../ch5/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="conclusion.html">
+            
+                
+                    <a href="../conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="code.html">
+            
+                
+                    <a href="../code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Fichiers de configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="glossaire.html">
+            
+                
+                    <a href="../glossaire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Glossaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="bibliographie.html">
+            
+                
+                    <a href="../bibliographie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Bibliographie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="abstract.html">
+            
+                
+                    <a href="../abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Abstract
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Publié avec GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table des matières"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Recherche"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Paramètres de Police"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Clair</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Nuit</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Partage"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Partager sur Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Partager sur Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Partager sur Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Partager sur Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Partager sur Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Étude et Implémentation de LDAP Sécurisé</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="2-3-installation-et-configuration-du-serveur">2.3 Installation et configuration du serveur</h2>
+<p>Cette section de&#x301;crit l&#x2019;installation et la configuration du serveur OpenLDAP sur une machine Tru64 5.1B. La machine utilise&#x301;e pour les tests est machiavel (voir <a href="">figure 2.1</a>). La version de OpenLDAP fournie avec le syste&#x300;me d&#x2019;exploitation Tru64 5.1B est la version 2.0.27. Par conse&#x301;quent, le protocole LDAPv3 est supporte&#x301;.</p>
+<p>Le logiciel OpenLDAP peut e&#x302;tre installe&#x301; en ligne de commande au moyen de l&#x2019;utilitaire setld<sup><a href="#fn_5" id="reffn_5">5</a></sup> ou a&#x300; partir d&#x2019;une interface graphique lance&#x301;e par la commande dusetup. La proce&#x301;dure d&#x2019;installation via l&#x2019;interface graphique est reprise ci-dessous. Par de&#x301;faut, le package OpenLDAP est installe&#x301; sous le re&#x301;pertoire <code>/usr/internet/openldap</code>.</p>
+<ol>
+<li>Ouvrir une session en tant qu&#x2019;utilisateur root.</li>
+<li><p>Monter le cdrom &quot;associated product volume 1&quot;</p>
+<p><code># mount /dev/disk/cdrom0c /cdrom</code></p>
+</li>
+<li><p>lancer l&#x2019;utilitaire d&#x2019;installation graphique et se&#x301;lectionner le package OpenLDAP.</p>
+<p><code># /cdrom/dusetup</code></p>
+</li>
+<li><p>Cre&#x301;er le re&#x301;pertoire pour la base de donne&#x301;es </p>
+<p><code># mkdir /data/openldap/var/db</code></p>
+</li>
+<li><p>Limiter l&#x2019;acce&#x300;s du re&#x301;pertoire a&#x300; l&#x2019;utilisateur root </p>
+<p><code># chmod 0700 /data/openldap/var/db</code></p>
+</li>
+</ol>
+<h3 id="2-3-1-le-fichier-de-configuration-slapd-conf">2.3.1 Le fichier de configuration slapd.conf</h3>
+<p>Le package OpenLDAP installe&#x301;, il faut maintenant configurer le serveur via le fichier <em>slapd.conf</em> situe&#x301; sous le re&#x301;pertoire <code>/usr/internet/openldap/etc/</code>. Le script <em>config_openldap.sh</em> de&#x301;veloppe&#x301; par HP permet de le faire de fac&#x327;on interactive. Il faut fournir le suffix de l&#x2019;annuaire, un DN et un mot de passe pour l&#x2019;administrateur. Me&#x302;me si le mot de passe de l&#x2019;administrateur est chiffre&#x301;, il vaut mieux interdire tout acce&#x300;s en lecture (0600) au fichier <em>slapd.conf</em>. Voici un extrait du fichier ge&#x301;ne&#x301;re&#x301; par le script <em>config_openldap.sh</em> :</p>
+<pre><code class="lang-apache"><span class="hljs-keyword">include</span> /usr/internet/openldap/etc/schema/core.schema
+<span class="hljs-keyword">include</span> /usr/internet/openldap/etc/schema/cosine.schema
+<span class="hljs-keyword">include</span> /usr/internet/openldap/etc/schema/nis.schema
+
+<span class="hljs-keyword">pidfile</span> /data/openldap/var/openldap_slapd.pidfile
+<span class="hljs-keyword">argsfile</span> /data/openldap/var/openldap_slapd.args
+
+<span class="hljs-comment">#######################################################################</span>
+<span class="hljs-comment"># ldbm database definitions</span>
+<span class="hljs-comment">#######################################################################</span>
+
+<span class="hljs-keyword">database</span>        ldbm
+<span class="hljs-keyword">suffix</span>          dc=inpres,dc=be
+<span class="hljs-keyword">rootdn</span>          cn=root,dc=inpres,dc=be
+<span class="hljs-keyword">rootpw</span>          {SSHA}54ZUYZi68u/V5hbdesMO6kAUIohl3YrH
+<span class="hljs-keyword">directory</span>       /data/openldap/var/db
+
+<span class="hljs-keyword">access</span> to attr=userpassword
+               <span class="hljs-keyword">by</span> self write
+               <span class="hljs-keyword">by</span> anonymous auth
+               <span class="hljs-keyword">by</span> users read
+               <span class="hljs-keyword">by</span> * compare
+</code></pre>
+<p>Le fichier de configuration du serveur OpenLDAP est divise&#x301; en deux sections. La premie&#x300;re (lignes 10 a&#x300; 15) de&#x301;finit les parame&#x300;tres globaux de configuration du serveur. La deuxie&#x300;me section (lignes 21 a&#x300; 31) est re&#x301;serve&#x301;e a&#x300; la configuration des diffe&#x301;rents annuaires ge&#x301;re&#x301;s par le serveur (un seul dans l&#x2019;exemple). Le tableau 2.2 reprend les principaux parame&#x300;tres globaux tandis que le tableau 2.3 de&#x301;crit les parame&#x300;tres spe&#x301;cifiques a&#x300; la configuration d&#x2019;un annuaires.</p>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>include</td>
+<td>Permet d&#x2019;inclure les sche&#x301;mas de&#x301;finissant les objets utilisables dans l&#x2019;annuaire. textttcore.schema est le sche&#x301;ma de base obligatoire.</td>
+</tr>
+<tr>
+<td>pidfile</td>
+<td>Emplacement du fichier contenant le pid (<em>Process Identifier</em>) du processus slapd.</td>
+</tr>
+<tr>
+<td>argsfile</td>
+<td>Fichier ou&#x300; est enregistre&#x301; la commande et les arguments utilise&#x301;s pour de&#x301;marrer slapd.</td>
+</tr>
+<tr>
+<td>loglevel</td>
+<td>Niveau de de&#x301;bogage du serveur.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 2.2 &#x2013; Parame&#x300;tres globaux de configuration du serveur OpenLDAP</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>database</td>
+<td>Type de la base de donne&#x301;es utilise&#x301;e pour stocker physiquement l&#x2019;annuaire.</td>
+</tr>
+<tr>
+<td>suffix</td>
+<td>Nom distinctif (DN) du noeud racine de l&#x2019;annuaire.</td>
+</tr>
+<tr>
+<td>rootdn</td>
+<td>DN de l&#x2019;administrateur.</td>
+</tr>
+<tr>
+<td>rootpw</td>
+<td>Mot de passe de l&#x2019;administrateur.</td>
+</tr>
+<tr>
+<td>directory</td>
+<td>Re&#x301;pertoire pour les fichiers de la base de donne&#x301;es. Le re&#x301;pertoire doit exister avant de lancer le serveur slapd. Pour plus de se&#x301;curite&#x301;, ce re&#x301;pertoire ne doit e&#x302;tre accessible que par l&#x2019;utilisateur root (mode 0700).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 2.3 &#x2013; Parame&#x300;tre de configuration des annuaires OpenLDAP</p>
+</blockquote>
+<p>Le script <em>config_openldap.sh ne</em> se contente pas de cre&#x301;er le fichier de configuration du serveur (<em>slapd.conf</em>) mais cre&#x301;e e&#x301;galement l&#x2019;annuaire dont la racine est spe&#x301;cifie&#x301; par le parame&#x300;tre suffix. Dans l&#x2019;extrait repris plus haut, l&#x2019;annuaire est cre&#x301;er avec <code>dc=inpres,dc=be</code> comme contexte de nommage. Les diffe&#x301;rents fichiers contenant physiquement l&#x2019;annuaire sont enregistre&#x301;s sous le re&#x301;pertoire <code>/data/openldap/var/db</code> (parame&#x300;tre <em>directory</em>).</p>
+<p>L&#x2019;entre&#x301;e <code>cn=root,dc=inpres,dc=be</code> (ligne 23) est de&#x301;finit comme utilisateur administrateur et posse&#x300;de les droits en lecture et e&#x301;criture sur tout l&#x2019;annuaire. Le mot de passe associe&#x301; a&#x300; cet utilisateur est e&#x301;galement stocke&#x301; dans le fichier slapd.conf (parame&#x300;tre <em>rootpw</em>). Le script config_openldap.sh e&#x301;vite de stocker le mot de passe en texte clair en le chiffrant au moyen de l&#x2019;algorithme SSHA (<em>Salted Secure Hash Algorithm</em>). OpenLDAP supporte plusieurs algorithmes de chiffrement dont MD5 et SHA.</p>
+<p>Par de&#x301;faut, config_openldap.sh cre&#x301;e une ACL (voir <a href="">Chapitre 1</a>) sur l&#x2019;attribut <em>userpassword</em>. Ce dernier contient le mot de passe associe&#x301; a&#x300; un utilisateur LDAP. Par conse&#x301;quent, il est prudent de restreindre son acce&#x300;s au moyen de d&#x2019;ACL. Pourtant, afin de faciliter la suite des tests, il est pre&#x301;fe&#x301;rable d&#x2019;autoriser un acce&#x300;s en lecture a&#x300; tout l&#x2019;annuaire pour tout le monde<sup><a href="#fn_6" id="reffn_6">6</a></sup>. En effet, pour l&#x2019;instant, la se&#x301;curite&#x301; de l&#x2019;annuaire n&#x2019;e&#x301;tant pas primordiale (la se&#x301;curite&#x301; sera aborde&#x301;e en de&#x301;tail au <a href="">chapitre 4</a>), l&#x2019;ACL suivante est suffisante.</p>
+<p><code>access to * by * read</code> </p>
+<p>Comme explique&#x301; plus haut, le script config_openldap.sh modifie le fichier slapd.conf mais va e&#x301;galement mettre a&#x300; jour la base de donne&#x301;es. Il cre&#x301;e l&#x2019;entre&#x301;e de type organization correspondant au suffixe <code>dc=inpres,dc=be</code> et deux objets <em>organizationalUnit</em>. Le contenu de l&#x2019;annuaire, convertit au format LDIF, est donne&#x301; ci-dessous.</p>
+<pre><code class="lang-apache"><span class="hljs-keyword">dn</span>: dc=inpres,dc=be dc: inpres
+<span class="hljs-keyword">objectClass</span>: dcObject
+<span class="hljs-keyword">objectClass</span>: organization
+<span class="hljs-keyword">o</span>: dc=inpres,dc=be
+
+<span class="hljs-keyword">dn</span>: ou=accounts, dc=inpres,dc=be
+<span class="hljs-keyword">ou</span>: accounts
+<span class="hljs-keyword">description</span>: Accounts
+<span class="hljs-keyword">objectClass</span>: organizationalUnit
+
+<span class="hljs-keyword">dn</span>: ou=groups, dc=inpres,dc=be
+<span class="hljs-keyword">ou</span>: groups
+<span class="hljs-keyword">description</span>: groups
+<span class="hljs-keyword">objectClass</span>: organizationalunit
+</code></pre>
+<p>La figure 2.2 repre&#x301;sente le DIT<sup><a href="#fn_7" id="reffn_7">7</a></sup> cre&#x301;e&#x301; par le script config_openldap.sh. Les en- tre&#x301;es <code>ou=account</code> et <code>ou=groups</code> sont destine&#x301;es a&#x300; contenir des comptes et des groupes d&#x2019;utilisateurs. Ainsi, par de&#x301;faut, OpenLDAP est configure&#x301; pour ge&#x301;rer et centraliser les comptes des utilisateurs du syste&#x300;me<sup><a href="#fn_8" id="reffn_8">8</a></sup>.</p>
+<p><img src="../images/image_2.2.png" alt="Fig. 2.2 &#x2013; DIT cre&#x301;er par de&#x301;faut"></p>
+<blockquote>
+<p>Fig. 2.2 &#x2013; DIT cre&#x301;er par de&#x301;faut</p>
+</blockquote>
+<h3 id="2-3-2-lancement-du-serveur">2.3.2 Lancement du serveur</h3>
+<p>Le processus serveur LDAP slapd (<em>stand-alone LDAP daemon</em>) peut e&#x302;tre lance&#x301; en appelant directement le fichier binaire.</p>
+<pre><code># /usr/internet/openldap/libexec/slapd
+</code></pre><p>soit en utilisant le script openldap</p>
+<pre><code> /sbin/init.d/openldap start
+</code></pre><p>Apre&#x300;s une mise a&#x300; jour du fichier de configuration slapd.conf, il faut rede&#x301;marrer le de&#x301;mon slapd pour qu&#x2019;il prenne en compte les dernie&#x300;res modifications.</p>
+<pre><code># /sbin/init.d/openldap stop
+# /sbin/init.d/openldap start
+</code></pre><p>Pour arre&#x302;ter proprement le processus slapd et lui permettre de vider ses caches, il est pre&#x301;fe&#x301;rable de lui envoyer le signal d&#x2019;interruption (sigint) pluto&#x302;t que le signal sigkill.</p>
+<pre><code>kill -INT &lt;pid du processus slapd&gt;
+</code></pre><h3 id="2-3-3-tester-le-serveur">2.3.3 Tester le serveur</h3>
+<p>L&#x2019;utilisation de la commande ps permet de s&#x2019;assurer que le processus serveur slapd soit bien de&#x301;marre&#x301;.</p>
+<pre><code># ps -A | grep slapd
+</code></pre><p>Plusieurs clients LDAP en ligne de commande sont fournis avec le package OpenL- DAP. Sous Tru64, ces outils sont installe&#x301;s par de&#x301;faut dans le re&#x301;pertoire <code>/usr/internet/openldap/bin</code>. Le tableau 2.4 de&#x301;crit les commandes disponibles pour contacter un serveur OpenLDAP.</p>
+<table>
+<thead>
+<tr>
+<th>nom</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ldapsearch</td>
+<td>Se connecte au serveur et effectue une recherche dans l&#x2019;an- nuaire.</td>
+</tr>
+<tr>
+<td>ldapmodify</td>
+<td>Premet de re&#x301;aliser des modifications sur les objets enregistre&#x301;s dans l&#x2019;annuaire.</td>
+</tr>
+<tr>
+<td>ldapadd</td>
+<td>Ajoute dans l&#x2019;annuaire les entre&#x301;es lues sur l&#x2019;entre&#x301;e standard (clavier) ou dans un fichier.</td>
+</tr>
+<tr>
+<td>ldapdelete</td>
+<td>Efface une ou plusieurs entre&#x301;es correspondantes aux DN pas- se&#x301;s en argument.</td>
+</tr>
+<tr>
+<td>ldapmodrdn</td>
+<td>Modifie le RDN (<em>Relative Distinguished Name</em>) d&#x2019;une entre&#x301;e.</td>
+</tr>
+<tr>
+<td>ldappasswd</td>
+<td>Change le mot de passe associe&#x301; a&#x300; une entre&#x301;e (attribut <em>userPassword</em>).</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 2.4 &#x2013; Clients OpenLDAP en ligne de commande</p>
+</blockquote>
+<p>La commande <em>ldapsearch</em> peut e&#x302;tre utile pour ve&#x301;rifier si le serveur re&#x301;agit aux re- que&#x302;tes des clients et s&#x2019;il est en mesure de servir les donne&#x301;es stocke&#x301;es dans l&#x2019;annuaire. Un exemple d&#x2019;utilisation de cette commandes est donne&#x301; ci-dessous.</p>
+<pre><code class="lang-apache"><span class="hljs-keyword">ldapsearch</span> -x -b dc=inpres,dc=be -h localhost -D cn=root,dc=inpres,dc=be -W <span class="hljs-string">&quot;objectClass=*&quot;</span> dn
+
+<span class="hljs-keyword">Enter</span> LDAP Password:
+<span class="hljs-keyword">version</span>: 2
+
+<span class="hljs-comment">#</span>
+<span class="hljs-comment"># filter: (objectclass=*)</span>
+<span class="hljs-comment"># requesting: dn</span>
+<span class="hljs-comment">#</span>
+
+<span class="hljs-comment"># inpres, be</span>
+<span class="hljs-keyword">dn</span>: dc=inpres,dc=be
+
+<span class="hljs-comment"># accounts, inpres, be</span>
+<span class="hljs-keyword">dn</span>: ou=accounts,dc=inpres,dc=be
+
+<span class="hljs-comment"># groups, inpres, be</span>
+<span class="hljs-keyword">dn</span>: ou=groups,dc=inpres,dc=be
+
+<span class="hljs-comment"># search result</span>
+<span class="hljs-keyword">search</span>: 2
+<span class="hljs-keyword">result</span>: 0 Success
+
+<span class="hljs-comment"># numResponses: 4</span>
+<span class="hljs-comment"># numEntries: 3</span>
+</code></pre>
+<p>Avant de pouvoir effectuer des recherches dans l&#x2019;annuaire, la commande ldapsearch doit s&#x2019;authentifier aupre&#x300;s du serveur slapd localise&#x301; par l&#x2019;option -h. Pour cela, il est possible de fournir un nom d&#x2019;utilisateur sous forme de DN et un mot de passe. Dans l&#x2019;exemple, l&#x2019;utilisateur <code>cn=root,dc=inpres,dc=be</code> est utilise&#x301;. L&#x2019;option -W demande a&#x300; ldapsearch qu&#x2019;elle fournisse a&#x300; l&#x2019;utilisateur une invite pour saisir son mot de passe. L&#x2019;option -x est ne&#x301;cessaire pour demander une authentification simple (SASL e&#x301;tant utilise&#x301; par de&#x301;faut).</p>
+<p>Si <em>ldapsearch</em> re&#x301;ussi a&#x300; s&#x2019;authentifier via l&#x2019;utilisateur <code>cn=root</code>, le re&#x301;sultat de la recherche est retourne&#x301; et affiche&#x301; au format LDIF. Dans l&#x2019;exemple, l&#x2019;entre&#x301;e <code>dc=inpres,dc=be</code> (option -b) est utilise&#x301;e comme entre&#x301;e de base pour la recherche. Le filtre <code>&quot;objectClass=*&quot;</code> est e&#x301;galement applique&#x301; (ici tous les objets) et seul l&#x2019;attribut dn est demande&#x301; comme re&#x301;sultat.</p>
+<p><sup><a href="#fn_5" id="reffn_5">5</a></sup>Utilitaire en ligne de commande pour la gestion des packages sous Tru64.</p>
+<p><sup><a href="#fn_6" id="reffn_6">6</a></sup>La gestion des habilitations sera vue au <a href="">chapitre 4</a></p>
+<p><sup><a href="#fn_7" id="reffn_7">7</a></sup> Sa structure sera revue pour s&#x2019;adapter au client Solaris 8</p>
+<p><sup><a href="#fn_8" id="reffn_8">8</a></sup> Cette approche est aborde&#x301;e en de&#x301;tail au <a href="">chapitre 3 (Authentification syste&#x300;me via LDAP)</a></p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ch2/section2.html" class="navigation navigation-prev " aria-label="Previous page: OpenLDAP"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ch2/section4.html" class="navigation navigation-next " aria-label="Next page: Tru64"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

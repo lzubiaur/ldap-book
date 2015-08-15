@@ -1,0 +1,17 @@
+host 10.59.4.8
+base dc=inpres,dc=be
+ldap_version 3
+
+#binddn cn=proxyuser,dc=padl,dc=com
+#bindpw secret
+#rootbinddn cn=manager,dc=padl,dc=com
+#port 389
+
+#scope sub
+#scope one
+#scope base
+
+nss_base_passwd  ou=People,dc=inpres,dc=be
+nss_base_shadow  ou=People,dc=inpres,dc=be
+nss_base_group   ou=Group,dc=inpres,dc=be
+nss_base_hosts   ou=Hosts,dc=inpres,dc=be

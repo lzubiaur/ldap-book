@@ -1,0 +1,3 @@
+# ldapadd -D cn=root,dc=inpres,dc=be -h 10.59.4.8 -f default
+Bind Password:
+adding new entry cn=default,ou=profile,dc=inpres,dc=be

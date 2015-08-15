@@ -1,0 +1,37 @@
+# ldap_add_user test secret 10001 10005
+Add user test...
+Enter LDAP Password:
+adding new entry "uid=test, ou=People, dc=inpres,dc=be"
+
+Change password for user test...
+Enter LDAP Password:
+Result: Success (0)
+
+# ldap_del_host homeDirDiderot
+Search for users...
+Delete attribut homeDirDiderot...
+Enter LDAP Password:
+modifying entry "uid=zubiaur,ou=People,dc=inpres,dc=be"
+
+modifying entry "uid=test,ou=People,dc=inpres,dc=be"
+
+# ldap_add_host homeDirDiderot /home/ldap/users
+Search for users...
+Add attribut homeDirDiderot...
+Enter LDAP Password:
+modifying entry "uid=zubiaur,ou=People,dc=inpres,dc=be"
+
+modifying entry "uid=test,ou=People,dc=inpres,dc=be"
+
+# ldap_chg_passwd test mot2passe
+Change password for test...
+Enter LDAP Password:
+modifying entry "uid=test,ou=People,dc=inpres,dc=be"
+
+# ldap_del_user test
+dn: uid=test,ou=People,dc=inpres,dc=be
+homeDirSunray1v440: /ldap/user/test
+homeDirMontaigne: /home/test
+homeDirDiderot: /home/ldap/users/test
+
+Enter LDAP Password:

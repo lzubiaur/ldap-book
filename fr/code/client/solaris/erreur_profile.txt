@@ -1,0 +1,13 @@
+# ldapclient -v -P default 10.59.4.8
+Arguments parsed:
+        profileName: default
+        defaultServerList: 10.59.4.8
+Handling init option
+About to configure machine by downloading a profile
+findBaseDN: begins
+findBaseDN: Stopping ldap
+findBaseDN: calling __ns_ldap_default_config()
+found 0 namingcontexts
+Cannot find the rootDN
+findBaseDN: Err exit
+Failed to find defaultSearchBase for domain inpres.be

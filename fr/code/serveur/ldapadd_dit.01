@@ -1,0 +1,49 @@
+# ldapadd -x -W -D cn=root,dc=inpres,dc=be -f db
+Enter LDAP Password:
+adding new entry "dc=inpres,dc=be"
+
+adding new entry "ou=People, dc=inpres,dc=be"
+
+adding new entry "ou=Group, dc=inpres,dc=be"
+
+adding new entry "ou=Rpc, dc=inpres,dc=be"
+
+adding new entry "ou=Protocols, dc=inpres,dc=be"
+
+adding new entry "ou=Networks, dc=inpres,dc=be"
+
+adding new entry "ou=Netgroup, dc=inpres,dc=be"
+
+adding new entry "ou=Aliases, dc=inpres,dc=be"
+
+adding new entry "ou=Hosts, dc=inpres,dc=be"
+
+adding new entry "ou=Services, dc=inpres,dc=be"
+
+adding new entry "ou=Ethers, dc=inpres,dc=be"
+
+adding new entry "ou=Profile, dc=inpres,dc=be"
+
+adding new entry "uid=laurent,ou=People, dc=inpres,dc=be"
+
+adding new entry "uid=test,ou=People, dc=inpres,dc=be"
+
+adding new entry "cn=ldap,ou=group, dc=inpres,dc=be"
+
+adding new entry "cn=sunray1V440profil,ou=profile, dc=inpres,dc=be"
+
+adding new entry "cn=sunray1v440,ou=profile, dc=inpres,dc=be"
+
+adding new entry "nismapname=auto_home, dc=inpres,dc=be"
+
+adding new entry "nismapname=auto_direct, dc=inpres,dc=be"
+
+adding new entry "nismapname=auto_master, dc=inpres,dc=be"
+
+adding new entry "nismapname=auto_ON, dc=inpres,dc=be"
+
+adding new entry "nismapname=auto_shared, dc=inpres,dc=be"
+
+adding new entry "cn=sunray1v440,ou=Hosts, dc=inpres,dc=be"
+
+adding new entry "cn=sunray2v440,ou=Hosts, dc=inpres,dc=be"

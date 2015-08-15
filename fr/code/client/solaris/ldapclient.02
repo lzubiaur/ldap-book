@@ -1,0 +1,18 @@
+# ldapclient -m -c anonymous -A "pam_ldap:simple"
+System successfully configured
+# ldapclient -l
+NS_LDAP_FILE_VERSION= 2.0
+NS_LDAP_SERVERS= 10.59.4.8
+NS_LDAP_SEARCH_BASEDN= dc=inpres,dc=be
+NS_LDAP_CREDENTIAL_LEVEL= anonymous
+NS_LDAP_SERVICE_AUTH_METHOD= pam_ldap:simple
+
+# /etc/init.d/nscd stop
+# /etc/init.d/nscd start
+egrep: can't open /etc/nsswitch.conf
+# cp /etc/nsswitch.ldap /etc/nsswitch.conf
+
+# /etc/init.d/nscd stop
+# /etc/init.d/nscd start
+# /etc/init.d/ldap.client stop
+# /etc/init.d/ldap.client start

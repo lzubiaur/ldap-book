@@ -1,0 +1,26 @@
+# PAM configuration
+#
+
+# Default definitions for Authentication management
+# Used when service name is not explicitly mentioned for authenctication
+#
+other	auth requisite		pam_authtok_get.so.1
+other	auth required		pam_dhkeys.so.1
+other	auth sufficient		pam_unix_auth.so.1
+other	auth required		pam_ldap.so.1
+
+#
+# passwd command (explicit because of a different authentication module)
+#
+passwd  auth sufficient		pam_passwd_auth.so.1
+passwd  auth required		pam_ldap.so.1
+
+#
+# Default definition for  Password management
+# Used when service name is not explicitly mentioned for password management
+#
+other	password required	pam_dhkeys.so.1
+other	password requisite	pam_authtok_get.so.1
+other	password requisite	pam_authtok_check.so.1
+other	password required	pam_authtok_store.so.1
+other	password required	pam_ldap.so.1 try_first_pass

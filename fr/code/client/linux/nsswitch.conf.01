@@ -1,0 +1,9 @@
+# /etc/nsswitch.conf
+#
+
+passwd:         compat ldap
+group:          compat ldap
+shadow:         compat ldap
+
+hosts:          dns files
+networks:       files

@@ -1,0 +1,15 @@
+# sia matrix configuration file
+
+siad_setpwent=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_endpwent=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_getpwent=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_getpwnam=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_getpwuid=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_chg_finger=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_chg_password=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+...
+siad_ses_reauthent=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_ses_estab=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_ses_launch=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_ses_release=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)
+siad_init=(BSD,libc.so) (LDAP,/usr/shlib/libsialdap.so)

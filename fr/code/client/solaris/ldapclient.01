@@ -1,0 +1,6 @@
+# ldapclient -i -b dc=inpres,dc=be 10.59.4.8
+System successfully configured
+# ldapclient -l
+NS_LDAP_FILE_VERSION= 2.0
+NS_LDAP_SERVERS= 10.59.4.8
+NS_LDAP_SEARCH_BASEDN= dc=inpres,dc=be

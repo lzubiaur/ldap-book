@@ -1,0 +1,1034 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Linux | Étude et Implémentation de LDAP Sécurisé</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ch4/section5.html" />
+    
+    
+    <link rel="prev" href="../ch4/section3.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="4.4" data-basepath=".." data-revision="Sat Aug 15 2015 14:44:01 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Tapez pour rechercher" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ch1/index.html">
+            
+                
+                    <a href="../ch1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Généralités sur le standard LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch1/section1.html">
+            
+                
+                    <a href="../ch1/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Le service d&#39;annuaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1/section2.html">
+            
+                
+                    <a href="../ch1/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Le standard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch1/section3.html">
+            
+                
+                    <a href="../ch1/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Le protocole
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch1/section4.html">
+            
+                
+                    <a href="../ch1/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Les modèles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch1/section5.html">
+            
+                
+                    <a href="../ch1/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Le format d&#39;échange
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Contexte
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch2/section2.html">
+            
+                
+                    <a href="../ch2/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        OpenLDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ch2/section3.html">
+            
+                
+                    <a href="../ch2/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Configuration du serveur
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch2/section4.html">
+            
+                
+                    <a href="../ch2/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch2/section5.html">
+            
+                
+                    <a href="../ch2/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch2/section6.html">
+            
+                
+                    <a href="../ch2/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/section7.html">
+            
+                
+                    <a href="../ch2/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch3/index.html">
+            
+                
+                    <a href="../ch3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Authentification LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch3/section1.html">
+            
+                
+                    <a href="../ch3/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Auth. et centralisation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch3/section2.html">
+            
+                
+                    <a href="../ch3/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch3/section3.html">
+            
+                
+                    <a href="../ch3/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch3/section4.html">
+            
+                
+                    <a href="../ch3/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch3/section5.html">
+            
+                
+                    <a href="../ch3/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Plusieurs home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch3/section6.html">
+            
+                
+                    <a href="../ch3/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Récapitulatif
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch4/index.html">
+            
+                
+                    <a href="../ch4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LDAP sécurisé
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ch4/section1.html">
+            
+                
+                    <a href="../ch4/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Authentification SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ch4/section2.html">
+            
+                
+                    <a href="../ch4/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Certificats
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch4/section3.html">
+            
+                
+                    <a href="../ch4/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        OpenLDAP et SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="4.4" data-path="ch4/section4.html">
+            
+                
+                    <a href="../ch4/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch4/section5.html">
+            
+                
+                    <a href="../ch4/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch4/section6.html">
+            
+                
+                    <a href="../ch4/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Tru64 v5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch4/section7.html">
+            
+                
+                    <a href="../ch4/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Tru64 v5.0
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ch4/section8.html">
+            
+                
+                    <a href="../ch4/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Messages LDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="ch4/section9.html">
+            
+                
+                    <a href="../ch4/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        ACL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="ch4/section10.html">
+            
+                
+                    <a href="../ch4/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        Mots de passe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch5/index.html">
+            
+                
+                    <a href="../ch5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Le protocole Kerberos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch5/section1.html">
+            
+                
+                    <a href="../ch5/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Présentation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ch5/section2.html">
+            
+                
+                    <a href="../ch5/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Fonctionnement
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch5/section3.html">
+            
+                
+                    <a href="../ch5/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="conclusion.html">
+            
+                
+                    <a href="../conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="code.html">
+            
+                
+                    <a href="../code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Fichiers de configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="glossaire.html">
+            
+                
+                    <a href="../glossaire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Glossaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="bibliographie.html">
+            
+                
+                    <a href="../bibliographie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Bibliographie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="abstract.html">
+            
+                
+                    <a href="../abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Abstract
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Publié avec GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table des matières"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Recherche"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Paramètres de Police"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Clair</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Nuit</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Partage"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Partager sur Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Partager sur Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Partager sur Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Partager sur Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Partager sur Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Étude et Implémentation de LDAP Sécurisé</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="4-4-configurer-le-client-linux">4.4 Configurer le client Linux</h2>
+<p>L&#x2019;objectif de cette configuration est l&#x2019;utilisation de SSL pour prote&#x301;ger les mots de passe transmis lors de l&#x2019;authentification LDAP. Malheureusement, par de&#x301;faut, les modules NSS et PAM permettant d&#x2019;inte&#x301;grer l&#x2019;authentification LDAP dans le syste&#x300;me d&#x2019;exploitation ne supportent pas SSL/TLS.</p>
+<p>La premie&#x300;re ope&#x301;ration a&#x300; effectuer est la compilation et l&#x2019;installation de OpenLDAP et des modules PAM et NSS pour LDAP afin d&#x2019;activer le support de SSL/TLS. La compilation de OpenLDAP est obligatoire car la version installe&#x301;e par de&#x301;faut ne supporte pas SSL or les modules PAM et NSS de PADL s&#x2019;appuient sur les bibliothe&#x300;ques du client OpenLDAP.</p>
+<h3 id="4-4-1-compilation-et-installation-de-openldap">4.4.1 Compilation et installation de OpenLDAP</h3>
+<p>Les sources des packages a&#x300; compiler ainsi que les versions retenues sont reprises au tableau 4.4.</p>
+<table>
+<thead>
+<tr>
+<th>bibliothe&#x300;que</th>
+<th>site web</th>
+<th>version</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OpenLDAP</td>
+<td>www.openldap.org</td>
+<td>2.2.24</td>
+</tr>
+<tr>
+<td>OpenSSL</td>
+<td>www.openssl.org</td>
+<td>0.9.7e</td>
+</tr>
+<tr>
+<td>Berkeley DB</td>
+<td>www.sleepycat.org</td>
+<td>4.2.52</td>
+</tr>
+<tr>
+<td>Cyrus SASL</td>
+<td>ftp.andrew.cmu.edu/pub/cyrusmail</td>
+<td>2.1.20 </td>
+</tr>
+<tr>
+<td>NSS LDAP</td>
+<td>www.padl.com</td>
+<td>2.3.8</td>
+</tr>
+<tr>
+<td>PAM LDAP</td>
+<td>www.padl.com</td>
+<td>1.7.8</td>
+</tr>
+</tbody>
+</table>
+<p>Le package OpenSSL offre le support de SSL/TLS a&#x300; OpenLDAP. Les modules de gestion de base de donne&#x301;es (DBM ou <em>DataBase Manager</em>) pour la gestion physique de l&#x2019;annuaire sont imple&#x301;mente&#x301;s par les bibliothe&#x300;ques du package Berkeley DB 4. OpenLDAP supporte plusieurs types de base de donne&#x301;es (parame&#x300;tre <em>database</em> du fichier <em>slapd.conf</em>) dont :</p>
+<ul>
+<li><strong>bdb</strong> : Syste&#x300;me optimise&#x301; pour le gestionnaire de base de donne&#x301;es Berkeley DB 4.</li>
+<li><strong>ldbm</strong> : Syste&#x300;me plus ancien que bdb, il est imple&#x301;mente&#x301; par le GNU Database</li>
+<li><strong>Manager</strong> ou la base de donne&#x301;es Berkeley.</li>
+<li><strong>passwd</strong> : Permet d&#x2019;ajouter une interface annuaire au dessus du fichier passwd.</li>
+<li><strong>shell</strong> : Permet de de&#x301;finir des programmes externes a&#x300; appeler au lieu d&#x2019;un gestionnaire de base de donne&#x301;es.</li>
+</ul>
+<p>Enfin le package Cyrus SASL offre une imple&#x301;mentation du protocole d&#x2019;authentification SASL (voir <a href="">Chapitre 1 page 19</a>). Le support de SASL est facultatif mais sans lui OpenLDAP n&#x2019;est pas totalement conforme au standard LDAPv3.</p>
+<p>Pour une meilleur organisation, il est pre&#x301;fe&#x301;rable de copier les sources (fichiers <em>.tgz</em> ou <em>.gz</em>) dans un re&#x301;pertoire pre&#x301;vu a&#x300; cet effet (&#xB4;&#xB4;&#xB4;/usr/src/&#xB4;&#xB4;&#xB4; par exemple). Ensuite, il faut de&#x301;compresser toutes les archives avec l&#x2019;utilitaire gunzip. Par exemple, pour de&#x301;compresser les sources d&#x2019;OpenSSL, la commande a&#x300; entrer est :</p>
+<p><code>gunzip -d openssl-0.9.7e.tar.gz</code></p>
+<p>Ensuite, le package est de&#x301;sarchive&#x301; avec l&#x2019;utilitaire <em>tar</em> :</p>
+<p><code>tar -xvf openssl-0.9.7e.tar</code></p>
+<p>La compilation des diffe&#x301;rents packages est assez classique. Le script configure est appele&#x301; pour activer ou de&#x301;sactiver certaines fonctionnalite&#x301;s du logiciel. Ensuite, la commande <code>make</code> est lance&#x301;e pour ge&#x301;ne&#x301;rer les bibliothe&#x300;ques et les logiciels a&#x300; partir des sources.</p>
+<p>Enfin, le package est installe&#x301; au moyen de la commande <code>make install</code>. Cette dernie&#x300;re ope&#x301;ration copie l&#x2019;ensemble des fichiers cre&#x301;e&#x301;s par <em>make</em> a&#x300; leur emplacement d&#x2019;exe&#x301;cution. Par exemple, les bibliothe&#x300;ques sont copie&#x301;es dans le re&#x301;pertoire <code>/usr/lib</code> et les fichiers exe&#x301;cutables sont copie&#x301;s dans <code>/usr/local</code>. La compilation de chaque package est de&#x301;crite en de&#x301;tail ci-dessous.</p>
+<h4 id="compiler-opensll">Compiler OpenSLL</h4>
+<p>La compilation d&#x2019;OpenSSL est simple. Mais pour e&#x302;tre utilisable par OpenLDAP, les bibliothe&#x300;ques OpenSSL doivent e&#x302;tre partageables. Ce qui n&#x2019;est pas le cas par de&#x301;faut. L&#x2019;option <em>shared</em> permet la compilation des bibliothe&#x300;ques en mode partage&#x301;.</p>
+<pre><code>cd /usr/src/openssl-version
+./config shared --openssldir=/usr/local
+make
+su -c &quot;make install&quot;
+</code></pre><h4 id="compiler-berkeley-db">Compiler Berkeley DB</h4>
+<pre><code>cd /usr/src/db-version/build_unix
+../dist/configure --prefix=/usr/local/
+make
+su -c &quot;make install&quot;
+</code></pre><p>Si une autre base de donne&#x301;es Berkeley est de&#x301;ja&#x300; installe&#x301;e, la variable d&#x2019;environnement <em>LD_LIBRARY_PATH</em> peut e&#x302;tre de&#x301;finie afin d&#x2019;e&#x301;viter des conflits de version.</p>
+<p><code>export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;</code></p>
+<h4 id="compiler-sasl">Compiler SASL</h4>
+<pre><code>cd cyrus-sasl-version
+configure
+make
+su -c &quot;make install&quot;
+ln -s /usr/local/lib/sasl2 /usr/lib/sasl2
+</code></pre><p>La dernie&#x300;re ligne cre&#x301;e le lien <code>/usr/lib/sasl2</code> vers le re&#x301;pertoire <code>/usr/local/lib/ sasl2</code>. Cette ope&#x301;ration est ne&#x301;cessaire car certaines applications s&#x2019;attendent a&#x300; trouver les bibliothe&#x300;ques SASL dans le re&#x301;pertoire <code>/usr/local/sasl2</code>.</p>
+<h4 id="compiler-openldap">Compiler OpenLDAP</h4>
+<p>Afin d&#x2019;e&#x301;viter des conflits de version, il est pre&#x301;fe&#x301;rable de de&#x301;sinstaller les utilitaires LDAP (package <em>ldap-utils</em>) de&#x301;ja&#x300; pre&#x301;sents sur le syste&#x300;me. L&#x2019;utilitaire de gestion des packages apt-get permet de re&#x301;aliser cette ope&#x301;ration de fac&#x327;on simple et rapide.</p>
+<pre><code>apt-get remove ldap-utils
+cd /usr/src/openldap-version
+configure --with-tls --with-cyrus-sasl --enable-crypt
+make depend
+make
+make test
+</code></pre><p>Le script <code>configure</code> doit indiquer qu&#x2019;il a bien trouve&#x301; les bibliothe&#x300;ques OpenSSL, SASL et Berkeley DB. La commande <code>make test</code> effectue diffe&#x301;rents tests sur le serveur (<em>slapd</em>) et les utilitaires clients (ldapsearch, ldapmodify, ldapadd...). Si ces tests ne retournent pas d&#x2019;erreur (<em>Test succeeded</em>), OpenLDAP peut e&#x302;tre installe&#x301; avec la commande suivante :</p>
+<p><code>su -c &quot;make install&quot;</code></p>
+<p>OpenLDAP est maintenant compile&#x301; pour supporter le protocole SSL/TLS.</p>
+<h3 id="4-4-2-tester-le-client-ldapsearch">4.4.2 Tester le client ldapsearch</h3>
+<p>Par de&#x301;faut, le re&#x301;pertoire de base pour l&#x2019;installation du logiciel OpenLDAP est <code>/usr/local</code> (option <em>&#x2013;with-subdir</em> du script configure). De&#x300;s lors, les utilitaires OpenLDAP comme ldapsearch et ldapadd ne sont plus configure&#x301;s via le fichier /etc/ldap.conf mais au moyen du fichier <code>/usr/local/etc/openldap/ldap.conf</code>. Les fichiers exe&#x301;cutables sont e&#x301;galement installe&#x301;s sous un autre re&#x301;pertoire : <code>/usr/local/bin/</code>. La configuration des clients OpenLDAP pre&#x301;voit plusieurs directives concernant SSL/TLS. Elles sont pre&#x301;sente&#x301;es au tableau 4.5</p>
+<table>
+<thead>
+<tr>
+<th>parame&#x300;tre</th>
+<th>description </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TLS_CACERT</td>
+<td>Equivalant de la directive <em>TLSCACertificateFile</em> du serveur (voir tableau 4.2 page 82), elle indique le fichier contenant le certificat de l&#x2019;autorite&#x301; de certification ne&#x301;cessaire a&#x300; la valida- tion du certificat du serveur.</td>
+</tr>
+<tr>
+<td>TLS_CACERTDIR</td>
+<td>Equivalant de la directive <em>TLSCACertificatePath</em> du serveur, elle spe&#x301;cifie un re&#x301;pertoire contenant les certificats a&#x300; utiliser.</td>
+</tr>
+<tr>
+<td>TLS_CERT</td>
+<td>Spe&#x301;cifie le certificat du client.</td>
+</tr>
+<tr>
+<td>TLS_KEY</td>
+<td>Spe&#x301;cifie le fichier contenant la cle&#x301; prive&#x301;e associe&#x301; au certificat du client mentionne&#x301; par la directive TLS_CERT.</td>
+</tr>
+<tr>
+<td>TLS_REQCERT</td>
+<td>Equivalant de l&#x2019;option <em>TLSVerifyClient</em> du serveur. La valeur par de&#x301;faut est demand.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Tab. 4.5 &#x2013; Parame&#x300;tres SSL du fichier ldap.conf</p>
+</blockquote>
+<p>Apre&#x300;s avoir copie&#x301; le certificat du CA (fichier <em>cacert.pem</em>) sur le client (dans le re&#x301;pertoire <code>/usr/local/ssl/certs</code> par exemple), le fichier <em>ldap.conf</em> est mis a&#x300; jour pour configurer les parame&#x300;tres SSL. Un exemple de fichier de configuration ldap.conf est repris ci-dessous.</p>
+<pre><code>#HOST 10.59.4.8
+BASE dc=inpres,dc=be
+LDAP_VERSION 3
+
+# configuration SSL
+URI ldaps://10.59.4.8:636/
+TLS_CACERT /usr/local/ssl/certs/cacert.pem
+TLS_REQCERT never
+</code></pre><p>Le parame&#x300;tre <em>TLS_CACERT</em> indique au client ou&#x300; trouver le certificat du CA et ainsi lui permettre de valider le certificat du serveur. Le client est configure&#x301; pour ne jamais envoyer son certificat (<em>TLS_REQCERT never</em>). </p>
+<p>Le parame&#x300;tre <em>URI** de&#x301;finit avec la valeur <code>ldaps://10.59.4.8:636/</code>, demande aux clients OpenLDAP de se connecter au serveur LDAP sur la machine </em>machiavel<em> (10.59.4.8) sur le port 636 via le protocole </em>ldaps*. La commande ldapsearch peut e&#x302;tre utilise&#x301;e pour se connecter au serveur et tester le bon fonctionnement de LDAPS.</p>
+<pre><code>/usr/local/bin/ldapsearch -x -b dc=inpres,dc=be -H ldaps://10.59.4.8
+/usr/local/bin/ldapsearch -x
+</code></pre><p>En premier lieu, <em>ldapsearch</em> est appele&#x301; avec les parame&#x300;tres passe&#x301;s directement en ligne de commande. Au deuxie&#x300;me essai, ldapsearch utilise les parame&#x300;tres de&#x301;finis dans le fichier de configuration ldap.conf.</p>
+<p>Si la commande ldapsearch ne trouve pas la bibliothe&#x300;que SASL, il faut de&#x301;finir la variable d&#x2019;environnement <em>LD_LIBRARY_PATH</em> avec la commande :</p>
+<p><code>export LD_LIBRARY_PATH=&quot;/usr/local/lib&quot;</code></p>
+<p>Elle peut e&#x301;galement e&#x302;tre place&#x301;e dans le fichier <code>~/.bashrc</code> pour l&#x2019;activer a&#x300; l&#x2019;ouverture de la session <em>bash</em>.</p>
+<h3 id="4-4-3-configuration-des-modules-nss-et-pam-pour-ldap">4.4.3 Configuration des modules NSS et PAM pour LDAP</h3>
+<p>Sous <em>Debian</em>, les bibliothe&#x300;ques NSS et PAM pour LDAP fournies par de&#x301;faut ne supportent pas SSL. Il faut recompiler ces packages en activant le support de SSL. Les sources sont disponibles en Open Source sur le site de la socie&#x301;te&#x301; PADL.</p>
+<h4 id="compiler-nss-ldap">Compiler nss_ldap</h4>
+<p>Pour activer le support de SSL, il faut compiler la bibliothe&#x300;que nss_ldap avec les bibliothe&#x300;ques OpenLDAP supportant SSL (voir <a href="">Compilation et installation de OpenLDAP page 84</a>). Cependant, avant de compiler et installer nns_ldap, il est pre&#x301;fe&#x301;rable de de&#x301;sinstaller le package libnss-ldap fournit avec la distribution Debian afin d&#x2019;e&#x301;viter des conflits avec la nouvelle version.</p>
+<p><code>apt-get remove libnss-ldap</code></p>
+<p>Ensuite, les sources sont de&#x301;compresse&#x301;es avec l&#x2019;utilitaire gunzip et le script de configuration <em>configure</em> est lance&#x301;.</p>
+<p><code>configure --enable-rfc2307bis</code></p>
+<p>L&#x2019;option <code>&#x2013;enable-rfc2307bis</code> permet d&#x2019;optimiser les recherches en utilisant les parame&#x300;tres <em>nss_base_xxx</em> du fichier de configuration du module nss_ldap. La ligne suivante, affiche&#x301;e par le script configure, indique que nss_ldap est bien configure&#x301; pour supporter SSL/TLS.</p>
+<p><code>checking for ldap_start_tls_s... yes</code></p>
+<p>Pour cela, il faut que les bibliothe&#x300;ques OpenSSL soient installe&#x301;es correctement (cf Compilation et installation de OpenLDAP page 84). Pour terminer, la compilation et l&#x2019;installation sont lance&#x301;es avec la commande <em>make</em>.</p>
+<pre><code>make
+su -c &quot;make install&quot;
+</code></pre><h4 id="compiler-pam-ldap">Compiler pam_ldap</h4>
+<p>Avant tout, il faut installer le package <em>libpam0g-dev</em> qui est le package PAM de de&#x301;veloppement. Il contient les fichiers d&#x2019;ente&#x302;te et les bibliothe&#x300;ques PAM ne&#x301;cessaires a&#x300; la compilation des modules PAM.</p>
+<p><code>apt-get install libpam0g-dev</code></p>
+<p>Ensuite, il faut de&#x301;compresser les sources avec l&#x2019;utilitaire gunzip et lancer la compilation a&#x300; l&#x2019;aide de la commande make.</p>
+<pre><code>cd pam_ldap-version
+configure
+make
+su -c &quot;make install&quot;
+</code></pre><p>De&#x301;finir la variable d&#x2019;environnement <em>LD_LIBRARY_PATH</em> n&#x2019;est pas suffisant pour les modules nss_ldap et pam_ldap. En effet, ces modules sont appele&#x301;s par le syste&#x300;me avant toute ouverture de session a&#x300; l&#x2019;authentification de l&#x2019;utilisateur.</p>
+<p>Pour que le syste&#x300;me retrouve les nouvelles bibliothe&#x300;ques, il faut e&#x301;diter le fichier <code>/etc/ld.so.conf</code> et ajouter l&#x2019;entre&#x301;e <code>/usr/local/lib</code> a&#x300; la liste des re&#x301;pertoires de recherche des bibliothe&#x300;ques. La commande ldconfig est finalement exe&#x301;cute&#x301;e pour mettre a&#x300; jour le syste&#x300;me.</p>
+<pre><code>echo /usr/local/lib &gt;&gt; /etc/ld.so.conf
+ldconfig -v
+</code></pre><h4 id="configuration-des-modules-nss-et-pam-pour-ldap">Configuration des modules NSS et PAM pour LDAP</h4>
+<p>Le fichier <code>/etc/ldap.conf</code> sert de configuration pour les modules NSS et PAM pour LDAP. Il ne doit pas e&#x302;tre confondu avec le fichier ldap.conf, sous le re&#x301;pertoire <code>/usr/local/etc/openldap/</code>, utilise&#x301; par les clients OpenLDAP comme ldapsearch ou ldapadd. Un exemple de fichier de configuration des modules nss_ldap et pam_ldap est donne&#x301; ci-dessous.</p>
+<pre><code>#HOST 10.59.4.8
+BASE dc=inpres,dc=be
+LDAP_VERSION 3
+
+# configuration SSL
+URI ldaps://10.59.4.8:636/
+TLS_CACERT /usr/local/ssl/certs/cacert.pem
+TLS_REQCERT never
+ssl on
+</code></pre><p>Les parame&#x300;tres utilise&#x301;s pour la configuration des clients OpenLDAP (page 87) restent valables pour les modules nss_ldap et pam_ldap. Mais en plus de ces parame&#x300;tres, il existe l&#x2019;option ssl qui permet de de&#x301;finir le comportement de nss_ldap et pam_ldap. En affectant la valeur <strong>on</strong> le client est oblige&#x301; d&#x2019;utiliser SSL. A l&#x2019;inverse, la valeur <strong>off</strong>, force le client a&#x300; ne pas utiliser SSL. Enfin, la valeur <em>start_tls</em> impose au client l&#x2019;usage de la commande StartTLS. Apre&#x300;s avoir relance&#x301; le de&#x301;mon nscd, le syste&#x300;me Debian est maintenant configure&#x301; pour utiliser SSL.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ch4/section3.html" class="navigation navigation-prev " aria-label="Previous page: OpenLDAP et SSL"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ch4/section5.html" class="navigation navigation-next " aria-label="Next page: Solaris"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

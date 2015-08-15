@@ -1,0 +1,22 @@
+include         /usr/internet/openldap/etc/schema/core.schema
+include		/usr/internet/openldap/etc/schema/cosine.schema
+include         /usr/internet/openldap/etc/schema/nis.schema
+
+pidfile		/data/openldap/var/openldap_slapd.pid
+argsfile	/data/openldap/var/openldap_slapd.args
+
+#######################################################################
+# ldbm database definitions
+#######################################################################
+
+database	ldbm
+suffix          dc=inpres,dc=be
+rootdn          cn=root,dc=inpres,dc=be
+rootpw          {SSHA}54ZUYZi68u/V5hbdesMO6kAUIohl3YrH
+directory	/data/openldap/var/db 
+
+access to attr=userpassword
+          by self write
+          by anonymous auth
+          by users read
+          by * compare

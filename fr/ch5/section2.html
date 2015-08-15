@@ -1,0 +1,930 @@
+<!DOCTYPE HTML>
+<html lang="fr" >
+    
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Fonctionnement | Étude et Implémentation de LDAP Sécurisé</title>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 2.2.0">
+        
+        
+        <meta name="HandheldFriendly" content="true"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+        <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+        
+    <link rel="stylesheet" href="../gitbook/style.css">
+    
+    
+
+        
+    
+    
+    <link rel="next" href="../ch5/section3.html" />
+    
+    
+    <link rel="prev" href="../ch5/section1.html" />
+    
+
+        
+    </head>
+    <body>
+        
+        
+    <div class="book" data-level="5.2" data-basepath=".." data-revision="Sat Aug 15 2015 14:44:01 GMT+0200 (CEST)">
+    
+
+<div class="book-summary">
+    <div class="book-search">
+        <input type="text" placeholder="Tapez pour rechercher" class="form-control" />
+    </div>
+    <ul class="summary">
+        
+        
+        
+        
+
+        
+
+        
+    
+        <li class="chapter " data-level="0" data-path="index.html">
+            
+                
+                    <a href="../index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                        Introduction
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1" data-path="ch1/index.html">
+            
+                
+                    <a href="../ch1/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.</b>
+                        
+                        Généralités sur le standard LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1" data-path="ch1/section1.html">
+            
+                
+                    <a href="../ch1/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.1.</b>
+                        
+                        Le service d&#39;annuaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="ch1/section2.html">
+            
+                
+                    <a href="../ch1/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.2.</b>
+                        
+                        Le standard
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="ch1/section3.html">
+            
+                
+                    <a href="../ch1/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.3.</b>
+                        
+                        Le protocole
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ch1/section4.html">
+            
+                
+                    <a href="../ch1/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.4.</b>
+                        
+                        Les modèles
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="ch1/section5.html">
+            
+                
+                    <a href="../ch1/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>1.5.</b>
+                        
+                        Le format d&#39;échange
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="2" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="2.1" data-path="ch2/index.html">
+            
+                
+                    <a href="../ch2/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.1.</b>
+                        
+                        Contexte
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ch2/section2.html">
+            
+                
+                    <a href="../ch2/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.2.</b>
+                        
+                        OpenLDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="ch2/section3.html">
+            
+                
+                    <a href="../ch2/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.3.</b>
+                        
+                        Configuration du serveur
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="ch2/section4.html">
+            
+                
+                    <a href="../ch2/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="ch2/section5.html">
+            
+                
+                    <a href="../ch2/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="ch2/section6.html">
+            
+                
+                    <a href="../ch2/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.6.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="ch2/section7.html">
+            
+                
+                    <a href="../ch2/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>2.7.</b>
+                        
+                        Performance
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3" data-path="ch3/index.html">
+            
+                
+                    <a href="../ch3/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.</b>
+                        
+                        Authentification LDAP
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.1" data-path="ch3/section1.html">
+            
+                
+                    <a href="../ch3/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.1.</b>
+                        
+                        Auth. et centralisation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="ch3/section2.html">
+            
+                
+                    <a href="../ch3/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.2.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="ch3/section3.html">
+            
+                
+                    <a href="../ch3/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.3.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="ch3/section4.html">
+            
+                
+                    <a href="../ch3/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.4.</b>
+                        
+                        Tru64
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="ch3/section5.html">
+            
+                
+                    <a href="../ch3/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.5.</b>
+                        
+                        Plusieurs home
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="ch3/section6.html">
+            
+                
+                    <a href="../ch3/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>3.6.</b>
+                        
+                        Récapitulatif
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="4" data-path="ch4/index.html">
+            
+                
+                    <a href="../ch4/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.</b>
+                        
+                        LDAP sécurisé
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="4.1" data-path="ch4/section1.html">
+            
+                
+                    <a href="../ch4/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.1.</b>
+                        
+                        Authentification SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="ch4/section2.html">
+            
+                
+                    <a href="../ch4/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.2.</b>
+                        
+                        Certificats
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="ch4/section3.html">
+            
+                
+                    <a href="../ch4/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.3.</b>
+                        
+                        OpenLDAP et SSL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" data-path="ch4/section4.html">
+            
+                
+                    <a href="../ch4/section4.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.4.</b>
+                        
+                        Linux
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" data-path="ch4/section5.html">
+            
+                
+                    <a href="../ch4/section5.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.5.</b>
+                        
+                        Solaris
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.6" data-path="ch4/section6.html">
+            
+                
+                    <a href="../ch4/section6.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.6.</b>
+                        
+                        Tru64 v5.1
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.7" data-path="ch4/section7.html">
+            
+                
+                    <a href="../ch4/section7.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.7.</b>
+                        
+                        Tru64 v5.0
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.8" data-path="ch4/section8.html">
+            
+                
+                    <a href="../ch4/section8.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.8.</b>
+                        
+                        Messages LDAP
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.9" data-path="ch4/section9.html">
+            
+                
+                    <a href="../ch4/section9.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.9.</b>
+                        
+                        ACL
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="4.10" data-path="ch4/section10.html">
+            
+                
+                    <a href="../ch4/section10.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>4.10.</b>
+                        
+                        Mots de passe
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="5" data-path="ch5/index.html">
+            
+                
+                    <a href="../ch5/index.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.</b>
+                        
+                        Le protocole Kerberos
+                    </a>
+            
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="5.1" data-path="ch5/section1.html">
+            
+                
+                    <a href="../ch5/section1.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.1.</b>
+                        
+                        Présentation
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter active" data-level="5.2" data-path="ch5/section2.html">
+            
+                
+                    <a href="../ch5/section2.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.2.</b>
+                        
+                        Fonctionnement
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="5.3" data-path="ch5/section3.html">
+            
+                
+                    <a href="../ch5/section3.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>5.3.</b>
+                        
+                        Mise en oeuvre
+                    </a>
+            
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="6" data-path="conclusion.html">
+            
+                
+                    <a href="../conclusion.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>6.</b>
+                        
+                        Conclusion
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="7" data-path="code.html">
+            
+                
+                    <a href="../code.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>7.</b>
+                        
+                        Fichiers de configuration
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="8" data-path="glossaire.html">
+            
+                
+                    <a href="../glossaire.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>8.</b>
+                        
+                        Glossaire
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="9" data-path="bibliographie.html">
+            
+                
+                    <a href="../bibliographie.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>9.</b>
+                        
+                        Bibliographie
+                    </a>
+            
+            
+        </li>
+    
+        <li class="chapter " data-level="10" data-path="abstract.html">
+            
+                
+                    <a href="../abstract.html">
+                
+                        <i class="fa fa-check"></i>
+                        
+                            <b>10.</b>
+                        
+                        Abstract
+                    </a>
+            
+            
+        </li>
+    
+
+
+        
+        <li class="divider"></li>
+        <li>
+            <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+                Publié avec GitBook
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+    <div class="book-body">
+        <div class="body-inner">
+            <div class="book-header">
+    <!-- Actions Left -->
+    <a href="#" class="btn pull-left toggle-summary" aria-label="Table des matières"><i class="fa fa-align-justify"></i></a>
+    <a href="#" class="btn pull-left toggle-search" aria-label="Recherche"><i class="fa fa-search"></i></a>
+    
+    <div id="font-settings-wrapper" class="dropdown pull-left">
+        <a href="#" class="btn toggle-dropdown" aria-label="Paramètres de Police"><i class="fa fa-font"></i>
+        </a>
+        <div class="dropdown-menu font-settings">
+    <div class="dropdown-caret">
+        <span class="caret-outer"></span>
+        <span class="caret-inner"></span>
+    </div>
+
+    <div class="buttons">
+        <button type="button" id="reduce-font-size" class="button size-2">A</button>
+        <button type="button" id="enlarge-font-size" class="button size-2">A</button>
+    </div>
+
+    <div class="buttons font-family-list">
+        <button type="button" data-font="0" class="button">Serif</button>
+        <button type="button" data-font="1" class="button">Sans</button>
+    </div>
+
+    <div class="buttons color-theme-list">
+        <button type="button" id="color-theme-preview-0" class="button size-3" data-theme="0">Clair</button>
+        <button type="button" id="color-theme-preview-1" class="button size-3" data-theme="1">Sépia</button>
+        <button type="button" id="color-theme-preview-2" class="button size-3" data-theme="2">Nuit</button>
+    </div>
+</div>
+
+    </div>
+
+    <!-- Actions Right -->
+    
+    <div class="dropdown pull-right">
+        <a href="#" class="btn toggle-dropdown" aria-label="Partage"><i class="fa fa-share-alt"></i>
+        </a>
+        <div class="dropdown-menu font-settings dropdown-left">
+            <div class="dropdown-caret">
+                <span class="caret-outer"></span>
+                <span class="caret-inner"></span>
+            </div>
+            <div class="buttons">
+                <button type="button" data-sharing="twitter" class="button">
+                    Partager sur Twitter
+                </button>
+                <button type="button" data-sharing="google-plus" class="button">
+                    Partager sur Google
+                </button>
+                <button type="button" data-sharing="facebook" class="button">
+                    Partager sur Facebook
+                </button>
+                <button type="button" data-sharing="weibo" class="button">
+                    Partager sur Weibo
+                </button>
+                <button type="button" data-sharing="instapaper" class="button">
+                    Partager sur Instapaper
+                </button>
+            </div>
+        </div>
+    </div>
+    
+
+    
+    <a href="#" target="_blank" class="btn pull-right google-plus-sharing-link sharing-link" data-sharing="google-plus" aria-label="Google"><i class="fa fa-google-plus"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right facebook-sharing-link sharing-link" data-sharing="facebook" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+    
+    
+    <a href="#" target="_blank" class="btn pull-right twitter-sharing-link sharing-link" data-sharing="twitter" aria-label="Twitter"><i class="fa fa-twitter"></i></a>
+    
+    
+    
+
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../" >Étude et Implémentation de LDAP Sécurisé</a>
+    </h1>
+</div>
+
+            <div class="page-wrapper" tabindex="-1">
+                <div class="page-inner">
+                
+                
+                    <section class="normal" id="section-">
+                    
+                        <h2 id="5-2-fonctionnement-de-kerberos">5.2 Fonctionnement de Kerberos</h2>
+<p>Kerberos est base&#x301; sur le concept d&#x2019;un tiers de confiance appele&#x301; <strong>KDC</strong> (<em>Key Distribution Center</em>). Ce dernier est charge&#x301; de la ve&#x301;rification des identite&#x301;s des utilisateurs et des services pour un domaine d&#x2019;administration. Sous Kerberos ce domaine d&#x2019;administration est e&#x301;galement appele&#x301; <em>realm</em> (traduit litte&#x301;ralement par royaume). Un domaine Kerberos ou <em>realm</em> est compose&#x301; du serveur Kerberos (KDC), d&#x2019;une base de donne&#x301;es ou&#x300; sont enregistre&#x301;es les donne&#x301;es administratives et un ou plusieurs serveurs d&#x2019;applications.</p>
+<p>La base de donne&#x301;es Kerberos (localise&#x301; sur le KDC) contient les <em>principals</em> et les mots de passe Kerberos de chaque utilisateurs. Un <em>principal</em> est une chai&#x302;ne de caracte&#x300;res identifiant un utilisateur ou un service. Un exemple de <em>principal</em> est donne&#x301; ci-dessous.</p>
+<p><code>host/machiavel@INPRES.BE</code></p>
+<p>Le champ <em>primary</em> (ici <code>host</code>), se&#x301;pare&#x301; du reste du <em>principal</em> par le caracte&#x300;re backslash (<code>/</code>), repre&#x301;sente un nom ou un type de service. L&#x2019;<em>instance</em> <code>machiavel</code> repre&#x301;sente la machine offrant le service. Par contre, un utilisateur ne posse&#x300;de pas d&#x2019;instance (par exemple <code>dupont@INPRES.BE</code>). Le domaine Kerberos (toujours spe&#x301;cifie&#x301; en majuscule) est place&#x301; apre&#x300;s le caracte&#x300;re <code>@</code>. Ainsi, la forme ge&#x301;ne&#x301;rique d&#x2019;un principal est :</p>
+<p><code>primary/instance@REALM</code></p>
+<p>A chaque service (champ primary d&#x2019;un principal) est associe&#x301; une cle&#x301; appele&#x301; service key connue du serveur et du service. Sur le serveur cette cle&#x301; est enregistre&#x301;e dans la base de donne&#x301;es Kerberos. Sur la machine ho&#x302;te (ou&#x300; est localise&#x301; le service) la cle&#x301; de service est enregistre&#x301;e dans un fichier appele&#x301; <em>keytabs</em>.</p>
+<p>Sous Kerberos, l&#x2019;acce&#x300;s a&#x300; un service ne sera autorise&#x301; qu&#x2019;aux clients pre&#x301;sentant un <em>ticket</em> prouvant l&#x2019;identite&#x301; de l&#x2019;utilisateur. Le client peut obtenir ce ticket aupre&#x300;s d&#x2019;une tierce partie de confiance : le KDC (serveur Kerberos). L&#x2019;obtention de ce ticket est re&#x301;alise&#x301;e en deux e&#x301;tapes :</p>
+<ol>
+<li><p>Le client effectue une premie&#x300;re demande de ticket aupre&#x300;s du KDC. Ce dernier ge&#x301;ne&#x300;re un ticket appele&#x301; TGT (<em>Ticket-Granting Ticket</em>) crypte&#x301; a&#x300; l&#x2019;aide du mot de passe de l&#x2019;utilisateur stocke&#x301; dans la base de donne&#x301;es Kerberos. Le client demande a&#x300; l&#x2019;utilisateur d&#x2019;entrer son mot de passe afin de de&#x301;crypter le ticket rec&#x327;u.</p>
+</li>
+<li><p>Le client utilise le TGT pour obtenir du KDC un deuxie&#x300;me ticket appele&#x301; TS (<em>Ticket Service</em>) qui sera utilise&#x301; pour s&#x2019;authentifier aupre&#x300;s du service.</p>
+</li>
+</ol>
+<p>En proce&#x301;dant de la sorte, Kerberos offre un me&#x301;canisme de SSO. En effet, le mot de passe de l&#x2019;utilisateur n&#x2019;est demande&#x301; que lorsque le client demande le premier ticket (TGT). Les autres tickets (TS) permettant l&#x2019;acce&#x300;s aux services, sont obtenus sur pre&#x301;sentation du TGT.</p>
+<h3 id="5-2-1-authentification-kerberos">5.2.1 Authentification Kerberos</h3>
+<p>En re&#x301;alite&#x301;, le processus d&#x2019;authentification est plus complexe que l&#x2019;explication donne&#x301;e au paragraphe pre&#x301;ce&#x301;dent. En effet, Kerberos utilise un algorithme de chiffrement a&#x300; cle&#x301; secre&#x300;te (syme&#x301;trique) pour re&#x301;aliser l&#x2019;authentification. La figure 5.1 reprend les diffe&#x301;rentes e&#x301;tapes du processus d&#x2019;authentification mis en place par Kerberos. Les acronymes et symboles utilise&#x301;s pour l&#x2019;explication du sche&#x301;ma sont donne&#x301;s ci-dessous.</p>
+<ul>
+<li><strong>AS</strong> : L&#x2019;AS (Authentication Service) fournit les cle&#x301; de sessions Kc,tgs et les TGT pour acce&#x301;der au TGS.</li>
+<li><strong>TGS</strong> : Le TGS (Ticket-Granting Serveur) fournit les cle&#x301;s de session Kc,s et les tickets de service (TS) pour acce&#x301;der aux services.</li>
+<li><strong>Kc</strong> : Cle&#x301; secre&#x300;te du client.</li>
+<li><strong>Ktgs</strong> : Cle&#x301; secre&#x300;te du TGS.</li>
+<li><strong>Ks</strong> : Cle&#x301; secre&#x300;te du serveur.</li>
+<li><strong>Kc,tgs</strong> : Cle&#x301; de session connue du client et du TGS.</li>
+<li><strong>Kc,s</strong> : Cle&#x301; de session connue du client et du serveur.</li>
+</ul>
+<p><img src="../images/image_5.1.png" alt="Fig. 5.1 &#x2013; Processus d&#x2019;authentification Kerberos"></p>
+<blockquote>
+<p>Fig. 5.1 &#x2013; Processus d&#x2019;authentification Kerberos</p>
+</blockquote>
+<ol>
+<li><p>L&#x2019;utilisateur se connecte sur la machine cliente et, via une application kerbe&#x301;rise&#x301;e, envoie une demande de ticket (TGT) au serveur d&#x2019;authentification (AS).</p>
+</li>
+<li><p>L&#x2019;AS ve&#x301;rifie la pre&#x301;sence du principal (nom de l&#x2019;utilisateur) dans la base de donne&#x301;es Kerberos. Si l&#x2019;utilisateur est retrouve&#x301;, l&#x2019;AS ge&#x301;ne&#x300;re une cle&#x301; de session (Kc,tgs) qui sera utilise&#x301;e pour la communication entre le TGS et le client. Ensuite, l&#x2019;AS pre&#x301;pare deux messages a&#x300; l&#x2019;intention du client. Le premier contient la cle&#x301; de session (Kc,tgs) crypte&#x301;e au moyen d&#x2019;une cle&#x301; associe&#x301;e a&#x300; l&#x2019;utilisateur (Kc). Cette cle&#x301; (Kc) est de&#x301;rive&#x301;e du mot de passe de l&#x2019;utilisateur stocke&#x301; sur le KDC. Le deuxie&#x300;me message est un ticket (TGT) contenant une copie de la cle&#x301; de session et le nom de l&#x2019;utilisateur. Ce ticket est ensuite crypte&#x301; avec la cle&#x301; secre&#x300;te du TGS (Ktgs). Enfin, le ticket et la cle&#x301; de session crypte&#x301;e sont envoye&#x301;s au client.</p>
+</li>
+<li><p>L&#x2019;application cliente de&#x301;crypte la cle&#x301; de session (Kc,tgs) a&#x300; l&#x2019;aide du mot de passe fournit par l&#x2019;utilisateur. Si la cle&#x301; de session peut e&#x302;tre de&#x301;crypte&#x301;e alors le ticket et la cle&#x301; de session (qui sont e&#x301;galement appele&#x301;s <em>credentials</em>) sont stocke&#x301;s dans un cache (sur la machine cliente) pour un usage ulte&#x301;rieur. Il est important de remarquer que le mot de passe de l&#x2019;utilisateur ne passe pas sur le re&#x301;seau. La cle&#x301; de session (Kc,tgs) est crypte&#x301;e avec la cle&#x301; Kc. Par conse&#x301;quent, seul le client peut lire la cle&#x301; de session (Kc,tgs). De plus, le contenu du ticket ne peut e&#x302;tre lu ni modifier par le client (en effet, le ticket est crypte&#x301; avec la cle&#x301; secre&#x300;te du TGS : Ktgs).</p>
+</li>
+<li><p>Le client ge&#x301;ne&#x300;re un <em>authentificateur</em> contenant le nom de l&#x2019;utilisateur, son adresse IP et une date d&#x2019;expiration. Cet authentificateur est ensuite crypte&#x301; au moyen de la cle&#x301; de session (Kc,tgs) obtenue pre&#x301;alablement. L&#x2019;authentificateur crypte&#x301; et le ticket (contenant la cle&#x301; de session Kc,tgs) sont envoye&#x301;s au TGS afin d&#x2019;obtenir un ticket pour un service de&#x301;termine&#x301;.</p>
+</li>
+<li><p>Le TGS est le seul a&#x300; pouvoir de&#x301;crypter le ticket au moyen de sa cle&#x301; secre&#x300;te (Ktgs) et ainsi obtenir la cle&#x301; de session (Kc,tgs). Afin d&#x2019;authentifier la demande du client, le TGS utilise la cle&#x301; de session pour de&#x301;crypter l&#x2019;authentificateur du client. En cas de re&#x301;ussite, le TGS cre&#x301;e une nouvelle cle&#x301; de session (Kc,s) pour la communication entre le client et le serveur. Cette cle&#x301; de session de service (Kc,s) est crypte&#x301; avec la cle&#x301; de session connue du TGS et du client (Kc,tgs). Ensuite, un ticket de service (TS) est e&#x301;galement cre&#x301;e&#x301;. Ce ticket contient une copie de la nouvelle cle&#x301; de session (Kc,s). Ce ticket est ensuite crypte&#x301;, mais cette fois, au moyen de la cle&#x301; secre&#x300;te du service (Ks).</p>
+</li>
+<li><p>Le client de&#x301;crypte la nouvelle cle&#x301; de session (Kc,s) au moyen de sa cle&#x301; de session (Kc,tgs). Ensuite, le client tente de s&#x2019;authentifier aupre&#x300;s du serveur sur lequel il de&#x301;sire se connecter. Pour cela, le client envoi un nouvel authentificateur (crypte&#x301; au moyen de la cle&#x301; de session Kc,s) et le ticket de service (TS).
+Le serveur valide la cle&#x301; de session Kc,s en de&#x301;cryptant le ticket au moyen de sa cle&#x301; secre&#x300;te (Ks) stocke&#x301;e dans sa table de cle&#x301;s (key table). Enfin, l&#x2019;authentificateur du client est de&#x301;crypte&#x301; a&#x300; l&#x2019;aide de la cle&#x301; de session Kc,s. Si le serveur peut de&#x301;crypter l&#x2019;authentificateur et si le ticket de service n&#x2019;est pas expire&#x301;, l&#x2019;acce&#x300;s au service est accorde&#x301;.</p>
+</li>
+<li><p>La dernie&#x300;re e&#x301;tape optionnelle permet au service de retourner un authentificateur et ainsi s&#x2019;authentifier aupre&#x300;s du client.</p>
+</li>
+</ol>
+<h3 id="5-2-2-etude-de-faisabilite%CC%81">5.2.2 Etude de Faisabilite&#x301;</h3>
+<p>Cette section reprend les diffe&#x301;rentes possibilite&#x301;s d&#x2019;inte&#x301;gration de Kerberos et les avantages et inconve&#x301;nients des sce&#x301;narios propose&#x301;s.</p>
+<h3 id="kerberos-applications-kerbe%CC%81rise%CC%81es">Kerberos + applications kerbe&#x301;rise&#x301;es</h3>
+<p>Un des gros inconve&#x301;nient de Kerberos est l&#x2019;utilisation d&#x2019;applications kerbe&#x301;rise&#x301;es. En effet, pour que les programmes clients et serveurs puissent utiliser Kerberos, ils doivent e&#x302;tre compile&#x301;s avec les bibliothe&#x300;ques Kerberos. En supposant que toutes les sources des programmes clients et serveurs utilise&#x301;s au sien du domaine Kerberos soient disponibles, la modification de certaines applications demanderait un effort de programmation trop important.</p>
+<p>L&#x2019;imple&#x301;mentation de Kerberos re&#x301;alise&#x301;e par le MIT fournit des versions kerbe&#x301;rise&#x301;es des services re&#x301;seau classiques. Les diffe&#x301;rents programmes clients et serveurs Kerberos sont repris ci-dessous.</p>
+<ul>
+<li>Programmes clients : rlogin, telnet, ftp, rpc et rsh.</li>
+<li>Programmes serveurs : klogind, telnetd, ftpd et kshd. </li>
+<li>Utilitaires : kinit, klist et kdestroy.</li>
+</ul>
+<p>L&#x2019;utilisation des applications kerbe&#x301;rise&#x301;es suit le sche&#x301;ma classique d&#x2019;utilisation de Kerberos. En premier lieu, l&#x2019;utilisateur exe&#x301;cute la commande <em>kinit</em> afin de re&#x301;cupe&#x301;rer le TGT et la cle&#x301; de session. La commande <em>kinit</em> va e&#x301;galement demander le mot de passe a&#x300; l&#x2019;utilisateur pour de&#x301;crypter la cle&#x301; de session. La cle&#x301; de session et le ticket sont alors stocke&#x301;s dans le cache du client. Ensuite, l&#x2019;utilisateur exe&#x301;cute un programme client kerbe&#x301;rise&#x301;s : par exemple la version de telnet fournie avec Kerberos (appele&#x301;e Ktelnet par la suite). Ktelnet ve&#x301;rifie dans le cache du client s&#x2019;il existe de&#x301;ja&#x300; un ticket et une cle&#x301; de session pour le service demande&#x301;. Si ce n&#x2019;est pas le cas, ktelnet contacte le KDC afin d&#x2019;obtenir un ticket pour ce service. Le ticket de service et la cle&#x301; de session correspondante sont e&#x301;galement enregistre&#x301; dans le cache du client. Enfin, ktelnet envoie le ticket de service au programme serveur telnetd kerbe&#x301;rise&#x301;. Ce dernier peut ve&#x301;rifier la validite&#x301; du ticket en le de&#x301;cryptant avec sa cle&#x301; secre&#x300;te.</p>
+<p>L&#x2019;avantage de ce sche&#x301;ma est le me&#x301;canisme de SSO mis en place. En effet, la commande <em>kinit</em> n&#x2019;est lance&#x301;e qu&#x2019;une seule fois afin de re&#x301;cupe&#x301;rer le ticket initial. Par la suite, les applications kerbe&#x301;rise&#x301;es utiliseront les tickets contenu dans le cache pour contacter les services ou pour obtenir de nouveaux tickets pour d&#x2019;autres services. L&#x2019;inconve&#x301;nient de ce syste&#x300;me est l&#x2019;obligation d&#x2019;utiliser des applications kerbe&#x301;rise&#x301;es. De plus, pour pouvoir se logger sur le syste&#x300;me ho&#x302;te, l&#x2019;utilisateur doit posse&#x301;der un compte local (fichier <em>passwd</em>).</p>
+<h4 id="kerberos-pam">Kerberos + PAM</h4>
+<p>L&#x2019;architecture PAM permet de configurer plusieurs modules de se&#x301;curite&#x301; sans avoir a&#x300; modifier les services (voir <a href="">Pluggable Authentication Module page 54</a>). Il existe de nombreux modules de se&#x301;curite&#x301; pour PAM dont un module pour l&#x2019;authentification Kerberos. Ainsi, toutes les applications utilisant PAM peuvent, via le module pam_krb5, utiliser Kerberos. Cependant, l&#x2019;utilisation du module PAM pour Kerberos ne permet pas de configurer le client d&#x2019;application comme client du KDC.</p>
+<p>Comme montrer a&#x300; la figure 5.3, seul le serveur d&#x2019;application est configure&#x301; comme client du KDC. L&#x2019;application cliente qui n&#x2019;est plus kerbe&#x301;rise&#x301;e demande le mot de passe a&#x300; l&#x2019;utilisateur. Dans ce sche&#x301;ma, l&#x2019;utilisateur n&#x2019;a plus de <em>credential</em> (donne&#x301;es lui permettant de s&#x2019;identifier) et le mot de passe est transmis en clair vers le programme serveur (1). Ensuite, via le module PAM pour Kerberos, le programme serveur effectue une reque&#x302;te d&#x2019;authentification au pre&#x300;s du KDC (2). Pour cela, le module pam_krb5 utilise le mot de passe rec&#x327;u pour obtenir un TGT et un ticket pour le service (3). Les <em>credentials</em> obtenus sont stocke&#x301;s sur l&#x2019;ho&#x302;te du programme serveur et seront supprime&#x301;s a&#x300; la fermeture de la session. Enfin, l&#x2019;utilisateur est autorise&#x301; a&#x300; acce&#x301;der au service s&#x2019;il posse&#x300;de un compte local sur la machine ho&#x302;te (4).</p>
+<p><img src="../images/image_5.2.png" alt="Fig. 5.2 &#x2013; Utilisation du module PAM pour Kerberos"></p>
+<blockquote>
+<p>Fig. 5.2 &#x2013; Utilisation du module PAM pour Kerberos</p>
+</blockquote>
+<p>L&#x2019;utilisation de pam_krb5 permet d&#x2019;employer Kerberos comme me&#x301;canisme d&#x2019;authentification pour un grand nombre d&#x2019;applications. Cependant, le module PAM pour Kerberos (pam_krb5) ne permet pas de tirer profit du me&#x301;canisme de SSO offert par Kerberos. En effet, l&#x2019;application cliente n&#x2019;est plus configure&#x301;e comme client Kerberos et par conse&#x301;quent n&#x2019;est plus en mesure d&#x2019;obtenir les credentials ne&#x301;cessaires au SSO. L&#x2019;autre de&#x301;savantage de pam_krb5 est l&#x2019;envoie du mot de passe en clair sur le re&#x301;seau par l&#x2019;application cliente. De plus, un compte en local doit exister pour permettre l&#x2019;acce&#x300;s au service.</p>
+<h4 id="kerberos-ldap">Kerberos + LDAP</h4>
+<p>Dans les deux cas pre&#x301;ce&#x301;dents, les utilisateurs enregistre&#x301;s sur le KDC doivent posse&#x301;der un compte sur les machines ho&#x302;tes. En effet, le serveur Kerberos ne centralise que les mots de passe des utilisateurs du domaine Kerberos (realm). Ainsi, pour retrouver les informations concernant un compte utilisateur, le service recherche dans les bases de donne&#x301;es locales du syste&#x300;me d&#x2019;exploitation (fichiers <em>passwd</em> et <em>group</em>). Cependant, gra&#x302;ce au me&#x301;canisme NSS (voir <a href="">Naming Service Switch page 51</a>), il est possible de configurer les services afin qu&#x2019;ils retrouvent les informations des comptes utilisateur dans un annuaire LDAP.</p>
+<p><img src="../images/image_5.3.png" alt="Fig. 5.3 &#x2013; Kerberos et annuaire LDAP"></p>
+<blockquote>
+<p>Fig. 5.3 &#x2013; Kerberos et annuaire LDAP</p>
+</blockquote>
+<p>Le principe de l&#x2019;authentification Kerberos est identique au premier cas : une application cliente kerbe&#x301;rise&#x301;e est utilise&#x301;e pour re&#x301;cupe&#x301;rer les tickets ne&#x301;cessaires a&#x300; l&#x2019;authentification d&#x2019;un utilisateur aupre&#x300;s d&#x2019;un service re&#x301;seau (e&#x301;galement kerbe&#x301;rise&#x301;). Mais, au lieu de consulter uniquement les bases de donne&#x301;es locales, les services utilisent l&#x2019;annuaire LDAP comme service de nommage. Ainsi, il devient possible de centraliser toutes les informations concernant les comptes utilisateur dans l&#x2019;annuaire LDAP. Cette architecture sera retenue pour les tests d&#x2019;installation et de configuration de Kerberos.</p>
+<h4 id="kerberos-ldap-comme-base-de-donne%CC%81es-kerberos">Kerberos + LDAP comme base de donne&#x301;es Kerberos</h4>
+<p>Dans ce cas, l&#x2019;annuaire LDAP ne contient plus uniquement les informations des comptes utilisateur. En fait, l&#x2019;annuaire LDAP est utilise&#x301; par Kerberos comme base de donne&#x301;es pour enregistrer les principals et les cle&#x301;s. Actuellement, cette solution n&#x2019;est pas supporte&#x301;e par le serveur Kerberos du MIT. Par contre, le serveur Kerberos <a href="http://www.pdc.kth.se/heimdal/" target="_blank">Heimdal</a> permet de re&#x301;aliser ce me&#x301;canisme.</p>
+
+                    
+                    </section>
+                
+                
+                </div>
+            </div>
+        </div>
+
+        
+        <a href="../ch5/section1.html" class="navigation navigation-prev " aria-label="Previous page: Présentation"><i class="fa fa-angle-left"></i></a>
+        
+        
+        <a href="../ch5/section3.html" class="navigation navigation-next " aria-label="Next page: Mise en oeuvre"><i class="fa fa-angle-right"></i></a>
+        
+    </div>
+</div>
+
+        
+<script src="../gitbook/app.js"></script>
+
+    
+    <script src="../gitbook/plugins/gitbook-plugin-livereload/plugin.js"></script>
+    
+
+<script>
+require(["gitbook"], function(gitbook) {
+    var config = {"fontSettings":{"theme":null,"family":"sans","size":2}};
+    gitbook.start(config);
+});
+</script>
+
+        
+    </body>
+    
+</html>

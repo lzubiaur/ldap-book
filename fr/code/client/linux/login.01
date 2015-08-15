@@ -1,0 +1,17 @@
+# The PAM configuration file for the Shadow `login' service
+
+auth      requisite  pam_securetty.so
+auth      requisite  pam_nologin.so
+auth      required   pam_env.so
+auth	    sufficient pam_unix.so nullok
+auth	    required   pam_ldap.so try_first_pass
+
+# Standard Unix account and session
+account    required   pam_unix.so
+session    required   pam_unix.so
+
+session    optional   pam_lastlog.so
+session    optional   pam_motd.so
+session    optional   pam_mail.so standard noenv
+
+password   required   pam_unix.so nullok obscure min=4 max=8

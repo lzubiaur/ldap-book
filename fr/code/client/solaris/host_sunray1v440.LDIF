@@ -1,0 +1,6 @@
+dn: cn=sunray1v440, ou=Hosts, dc=inpres,dc=be
+ipHostNumber: 10.59.4.6
+objectClass: ipHost
+objectClass: device
+objectClass: top
+cn: sunray1v440

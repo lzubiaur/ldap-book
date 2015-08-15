@@ -1,0 +1,13 @@
+host 10.59.4.8
+#port 389
+base dc=inpres,dc=be
+ldap_version 3
+
+#binddn cn=proxyuser,dc=example,dc=net
+#bindpw secret
+#rootbinddn cn=admin,ou=people,dc=example,dc=net
+
+#pam_filter objectclass=account
+#pam_login_attribute uid
+
+pam_password crypt

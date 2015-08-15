@@ -1,0 +1,7 @@
+Loaded Configuration file /etc/ldapcd.conf
+Connected to LDAP server on 10.59.4.8
+  Search base "dc=inpres,dc=be" confirmed
+  Retrieved Object class information
+  Password object class attributes verified
+  Group object class attributes verified
+Directory configuration verified

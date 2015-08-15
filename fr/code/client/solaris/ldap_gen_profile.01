@@ -1,0 +1,10 @@
+# ldap_gen_profile -b dc=inpres,dc=be -a none -c anonymous 10.59.4.8 > default
+# cat default
+dn: cn=default,ou=profile,dc=inpres,dc=be
+ObjectClass: top
+ObjectClass: DUAConfigProfile
+defaultServerList: 10.59.4.8
+defaultSearchBase: dc=inpres,dc=be
+authenticationMethod: none
+cn: default
+credentialLevel: anonymous
